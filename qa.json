@@ -32,16 +32,16 @@
         "pocet_pretekajicich": 0
       }
     },
-    "preneseno_PC_MB": 1.04,
+    "preneseno_PC_MB": 1.47,
     "nejvetsi_obrazek_PC": {
-      "kB": 147,
-      "url": "http://localhost:8811/penziontkm/img/penzion-1440.webp"
+      "kB": 153,
+      "url": "http://localhost:8811/penziontkm/img/kastiel-kemp-640.webp"
     },
-    "snimku_PC": 11,
-    "preneseno_mobil_MB": 1.48,
+    "snimku_PC": 12,
+    "preneseno_mobil_MB": 1.69,
     "nejvetsi_obrazek_mobil": {
-      "kB": 183,
-      "url": "http://localhost:8811/penziontkm/img/kemp-1080.webp"
+      "kB": 153,
+      "url": "http://localhost:8811/penziontkm/img/kastiel-kemp-640.webp"
     },
     "snimku_mobil": 15,
     "seo": {
@@ -63,7 +63,7 @@
     "font_text": "Montserrat",
     "podstranky": {
       "stranek": 3,
-      "obrazku": 51
+      "obrazku": 57
     }
   }
 }

@@ -5,6 +5,7 @@
 <section class="hero">
   <figure class="hero-foto">
     {{ img('penzion.jpg', 'Penzión TKM Betliar s kvetmi na balkónoch a kopcami v pozadí', sizes='(min-width: 96rem) 96rem, 100vw') }}
+    <a class="hero-odznak" href="https://www.facebook.com/PenzionTKM/reviews" rel="noopener"><strong>100&nbsp;%</strong><span>odporúča na Facebooku</span><small>17 recenzií</small></a>
   </figure>
   <div class="hero-text">
     <svg class="lopticka" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#F2E15F"/><path d="M7 7c7 6 7 20 0 26M33 7c-7 6-7 20 0 26" stroke="#fff" stroke-width="2.6" fill="none" stroke-linecap="round"/></svg>
@@ -48,6 +49,8 @@
         <text x="24" y="104" class="plan-mala">← Gemerská Poloma, Poprad</text>
         <text x="976" y="104" class="plan-mala" text-anchor="end">Betliar, Rožňava →</text>
         <text x="500" y="51" class="plan-cesta" text-anchor="middle">POLOMSKÁ CESTA</text>
+        <!-- zeleň -->
+        <g class="stromy"><circle cx="190" cy="160" r="20"/><circle cx="184" cy="154" r="7" class="svetlo"/><circle cx="226" cy="140" r="16"/><circle cx="221" cy="135" r="6" class="svetlo"/><circle cx="232" cy="184" r="14"/><circle cx="228" cy="180" r="5" class="svetlo"/><circle cx="700" cy="150" r="18"/><circle cx="695" cy="145" r="6" class="svetlo"/><circle cx="736" cy="136" r="14"/><circle cx="732" cy="132" r="5" class="svetlo"/><circle cx="905" cy="160" r="20"/><circle cx="899" cy="154" r="7" class="svetlo"/><circle cx="948" cy="140" r="15"/><circle cx="944" cy="136" r="5" class="svetlo"/><circle cx="952" cy="300" r="18"/><circle cx="947" cy="295" r="6" class="svetlo"/><circle cx="930" cy="338" r="14"/><circle cx="926" cy="334" r="5" class="svetlo"/><circle cx="34" cy="440" r="17"/><circle cx="29" cy="435" r="6" class="svetlo"/><circle cx="30" cy="500" r="15"/><circle cx="26" cy="496" r="5" class="svetlo"/><circle cx="36" cy="560" r="19"/><circle cx="30" cy="554" r="7" class="svetlo"/><circle cx="972" cy="440" r="15"/><circle cx="968" cy="436" r="5" class="svetlo"/><circle cx="968" cy="600" r="17"/><circle cx="963" cy="595" r="6" class="svetlo"/></g>
         <!-- parkovisko -->
         <g class="plocha" data-bod="parkovisko">
           <rect x="330" y="116" width="270" height="74" rx="4"/>
@@ -192,8 +195,12 @@
         <p>V&nbsp;lete sa na kurtoch hrajú turnaje dospelých aj detí a&nbsp;bežia tenisové kempy. Pre mládež sú tenisovo-kondičné tréningy, ktoré zlepšujú rýchlosť, techniku aj silu.</p>
         <a class="odkaz" href="https://www.instagram.com/penzion_tkm/" rel="noopener">Fotky z&nbsp;turnajov na Instagrame</a>
       </div>
-      <figure class="turnaje-a">{{ img('turnaj.jpg', 'Účastníci letného tenisového turnaja na antukovom kurte TKM', sizes='(min-width: 64rem) 30rem, 92vw') }}</figure>
-      <figure class="turnaje-b">{{ img('kemp.jpg', 'Deti z tenisového kempu s raketami na kurte', sizes='(min-width: 64rem) 22rem, 92vw') }}</figure>
+      <div class="turnaje-pas">
+        <figure class="na-sirku">{{ img('turnaj.jpg', 'Účastníci letného tenisového turnaja na antukovom kurte TKM', sizes='(min-width: 64rem) 28rem, 80vw') }}</figure>
+        <figure class="na-vysku">{{ img('vitaz.jpg', 'Víťaz turnaja s pohárom a diplomom pri sieti', sizes='(min-width: 64rem) 16rem, 56vw') }}</figure>
+        <figure class="na-vysku">{{ img('deti-kurt.jpg', 'Dvaja mladí tenisti s diplomami na antukovom kurte', sizes='(min-width: 64rem) 16rem, 56vw') }}</figure>
+        <figure class="na-sirku">{{ img('kemp.jpg', 'Deti z tenisového kempu s raketami na kurte', sizes='(min-width: 64rem) 28rem, 80vw') }}</figure>
+      </div>
     </div>
   </div>
 </section>
@@ -237,6 +244,7 @@
       <h2>Výlety z&nbsp;Betliara</h2>
       <p class="uvod">Penzión je dobrým východiskom do Slovenského krasu aj Slovenského raja. Kaštieľ s&nbsp;parkom máte na prechádzku.</p>
       <a class="odkaz" href="{{ url('okolie') }}">Pamiatky a&nbsp;okolie</a>
+      <figure class="okolie-kastiel">{{ img('kastiel-kemp.jpg', 'Deti z tenisového kempu TKM pred kaštieľom Betliar', sizes='(min-width: 64rem) 22rem, 70vw') }}<figcaption>Tenisový kemp na výlete v&nbsp;kaštieli</figcaption></figure>
     </header>
     <ol class="trasa" role="list">
       <li class="trasa-start"><span class="trasa-km">0 km</span><span>Penzión TKM</span></li>
