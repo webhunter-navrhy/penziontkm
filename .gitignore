@@ -1,0 +1,9 @@
+dist/
+.cache/
+qa/
+__pycache__/
+_research/
+_snimky/
+podklady/
+kolaz_*.png
+*.bak-*

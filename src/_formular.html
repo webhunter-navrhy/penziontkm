@@ -1,0 +1,26 @@
+{# Rezervačný formulár. Endpoint a demo režim z _data/site.json (formular.endpoint, formular.demo). #}
+<form class="formular" method="post" {% if site.formular.endpoint and not site.formular.demo %}action="{{ site.formular.endpoint }}"{% endif %} data-endpoint="{{ site.formular.endpoint }}" data-demo="{{ 1 if site.formular.demo or not site.formular.endpoint else 0 }}">
+  <div class="pole-riadok">
+    <label>Príchod <input name="prichod" type="date" required></label>
+    <label>Odchod <input name="odchod" type="date" required></label>
+  </div>
+  <div class="pole-riadok">
+    <label>Počet osôb <input name="osoby" type="number" min="1" max="26" value="2" inputmode="numeric"></label>
+    <label>Ubytovanie <select name="izba">
+      <option>Dvojlôžková izba s balkónom</option>
+      <option>Dvojlôžková izba</option>
+      <option>Apartmán</option>
+      <option>Bez ubytovania (kurt, hala, bowling, wellness)</option>
+    </select></label>
+  </div>
+  <label>Meno a priezvisko <input name="meno" autocomplete="name" required></label>
+  <div class="pole-riadok">
+    <label>E-mail <input name="email" type="email" autocomplete="email" required></label>
+    <label>Telefón <input name="telefon" type="tel" autocomplete="tel"></label>
+  </div>
+  <label>Poznámka <textarea name="sprava" rows="3" placeholder="Napr. prístelka, tenisový kurt, večera pre skupinu"></textarea></label>
+  <div class="past" aria-hidden="true"><label>Nevypĺňať <input name="_gotcha" tabindex="-1" autocomplete="off"></label></div>
+  <input type="hidden" name="_subject" value="{{ site.formular.predmet }}">
+  <button type="submit" class="tlacidlo tlacidlo-zlte">Odoslať dopyt</button>
+  <p class="formular-stav" role="status" aria-live="polite"></p>
+</form>

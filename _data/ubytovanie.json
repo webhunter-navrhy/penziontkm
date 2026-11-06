@@ -1,0 +1,10 @@
+{
+  "izby": [
+    {"nazov": "Dvojlôžková izba s balkónom", "pocet": 5, "ceny": [["2 osoby", "50 €"], ["1 osoba", "34 €"]]},
+    {"nazov": "Dvojlôžková izba", "pocet": 2, "ceny": [["2 osoby", "50 €"], ["1 osoba", "34 €"]]},
+    {"nazov": "Apartmán – 1 spálňa", "pocet": 1, "ceny": [["1–2 osoby", "65 €"], ["3–4 osoby", "85 €"]]},
+    {"nazov": "Apartmán – 2 spálne", "pocet": 1, "ceny": [["1–4 osoby", "120 €"], ["6 osôb", "160 €"], ["8 osôb", "190 €"]], "odkaz": "apartman"}
+  ],
+  "poznamky": ["Ceny sú za izbu na noc.", "Miestna daň 1 € / osoba / noc.", "Prístelka je možná v dvoch izbách.", "Príchod 14:00 – 21:00, odchod do 10:00."],
+  "vybava": ["vlastná kúpeľňa so sprchovacím kútom a WC", "nábytok na zákazku z masívneho dreva", "LCD televízor", "WiFi zdarma", "5 izieb s balkónom", "strážené parkovisko s uzamykateľnou bránou"]
+}

@@ -1,0 +1,261 @@
+{% extends "_base.html" %}
+{% set titulek = 'Penzión TKM Betliar – ubytovanie, tenis, bowling a reštaurácia' %}
+{% set cesta = '' %}
+{% block obsah %}
+<section class="hero">
+  <figure class="hero-foto">
+    {{ img('penzion.jpg', 'Penzión TKM Betliar s kvetmi na balkónoch a kopcami v pozadí', sizes='(min-width: 96rem) 96rem, 100vw') }}
+  </figure>
+  <div class="hero-text">
+    <svg class="lopticka" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#F2E15F"/><path d="M7 7c7 6 7 20 0 26M33 7c-7 6-7 20 0 26" stroke="#fff" stroke-width="2.6" fill="none" stroke-linecap="round"/></svg>
+    <p class="hero-miesto">Betliar · Gemer</p>
+    <h1>Penzión TKM Betliar</h1>
+    <p class="hero-veta">Ubytovanie, tenis, bowling a&nbsp;reštaurácia v&nbsp;jednom areáli. Na konci Betliara, kúsok od cesty Rožňava – Poprad.</p>
+    <div class="hero-akcie">
+      <a class="tlacidlo tlacidlo-zlte" href="#kontakt">Rezervovať pobyt</a>
+      <a class="tlacidlo-text" href="tel:{{ site.kontakt.telefon|replace(' ', '') }}">alebo volajte {{ site.kontakt.telefon_zobraz }}</a>
+    </div>
+  </div>
+</section>
+
+<ul class="fakty" role="list">
+  <li><strong>8 izieb</strong> a&nbsp;apartmán</li>
+  <li><strong>26 lôžok</strong> pre rodiny aj partie</li>
+  <li><strong>4 antukové kurty</strong> a&nbsp;krytá hala</li>
+  <li><strong>1,5 km</strong> ku kaštieľu Betliar</li>
+</ul>
+
+<section class="sekcia areal" id="areal">
+  <div class="areal-in">
+    <header class="areal-hlava">
+      <h2>Čo nájdete v&nbsp;areáli</h2>
+      <p>Všetko je pár krokov od izby: kurty, hala, bowling, posilňovňa aj reštaurácia. Kliknite na miesto v&nbsp;pláne.</p>
+    </header>
+    <div class="plan" role="img" aria-label="Schéma areálu: parkovisko pri ceste, penzión s reštauráciou, bowlingom a posilňovňou, terasa s ihriskom, krytá hala a štyri antukové kurty">
+      <svg viewBox="0 0 1000 640" class="plan-svg" aria-hidden="true">
+        <defs>
+          <g id="kurt">
+            <rect x="0" y="0" width="200" height="92" fill="none"/>
+            <line x1="0" y1="11.5" x2="200" y2="11.5"/><line x1="0" y1="80.5" x2="200" y2="80.5"/>
+            <line x1="46" y1="11.5" x2="46" y2="80.5"/><line x1="154" y1="11.5" x2="154" y2="80.5"/>
+            <line x1="46" y1="46" x2="154" y2="46"/>
+            <line x1="100" y1="-4" x2="100" y2="96" class="siet"/>
+          </g>
+        </defs>
+        <!-- cesta -->
+        <rect x="0" y="18" width="1000" height="54" class="cesta"/>
+        <line x1="0" y1="45" x2="380" y2="45" class="cesta-stred"/><line x1="620" y1="45" x2="1000" y2="45" class="cesta-stred"/>
+        <text x="24" y="104" class="plan-mala">← Gemerská Poloma, Poprad</text>
+        <text x="976" y="104" class="plan-mala" text-anchor="end">Betliar, Rožňava →</text>
+        <text x="500" y="51" class="plan-cesta" text-anchor="middle">POLOMSKÁ CESTA</text>
+        <!-- parkovisko -->
+        <g class="plocha" data-bod="parkovisko">
+          <rect x="330" y="116" width="270" height="74" rx="4"/>
+          {% for i in range(9) %}<line x1="{{ 352 + i*28 }}" y1="116" x2="{{ 352 + i*28 }}" y2="146" class="stojisko"/>{% endfor %}
+        </g>
+        <!-- penzión -->
+        <g class="budova">
+          <rect x="250" y="214" width="420" height="150" rx="3"/>
+          <line x1="470" y1="214" x2="470" y2="364"/><line x1="580" y1="214" x2="580" y2="364"/>
+          <text x="262" y="236" class="plan-budova">PENZIÓN TKM</text>
+        </g>
+        <!-- terasa a ihrisko -->
+        <g class="plocha" data-bod="terasa">
+          <rect x="700" y="214" width="180" height="150" rx="4"/>
+          <circle cx="738" cy="262" r="9" class="stol"/><circle cx="770" cy="262" r="9" class="stol"/><circle cx="738" cy="296" r="9" class="stol"/>
+          <rect x="806" y="300" width="50" height="40" class="ihrisko"/>
+        </g>
+        <!-- hala -->
+        <g class="hala-plan" data-bod="hala">
+          <rect x="70" y="408" width="350" height="200" rx="3"/>
+          <use href="#kurt" x="145" y="462" class="kurt-ciary"/>
+        </g>
+        <!-- 4 antukové kurty -->
+        <g class="kurty-plan" data-bod="kurty">
+          <rect x="460" y="404" width="480" height="212" rx="3" class="kurty-plocha"/>
+          <use href="#kurt" x="478" y="418" class="kurt-ciary"/><use href="#kurt" x="722" y="418" class="kurt-ciary"/>
+          <use href="#kurt" x="478" y="512" class="kurt-ciary"/><use href="#kurt" x="722" y="512" class="kurt-ciary"/>
+        </g>
+        <!-- body -->
+        {% set body = {'parkovisko': (465, 168, 'Parkovisko', 'r'), 'izby': (296, 266, 'Izby', 'r'), 'restauracia': (296, 326, 'Reštaurácia', 'r'), 'bowling': (525, 300, 'Bowling', 'b'), 'fitness': (625, 300, 'Fitness', 'b'), 'terasa': (790, 238, 'Terasa', 'r'), 'hala': (96, 386, 'Krytá hala', 'r'), 'kurty': (486, 386, '4 antukové kurty', 'r')} %}
+        {% for b in data.areal %}{% set p = body[b.id] %}
+        <g class="bod{% if loop.first %} je-aktivny{% endif %}" data-bod="{{ b.id }}" transform="translate({{ p[0] }} {{ p[1] }})">
+          <circle r="26" class="bod-zona"/>
+          <circle r="13" class="bod-lopta"/>
+          <path d="M-9 -9 C-3 -3 -3 3 -9 9 M9 -9 C3 -3 3 3 9 9" class="bod-sev"/>
+          {% if p[3] == 'r' %}<text x="22" y="5" class="bod-text">{{ p[2] }}</text>{% else %}<text x="0" y="36" text-anchor="middle" class="bod-text">{{ p[2] }}</text>{% endif %}
+        </g>{% endfor %}
+      </svg>
+      <p class="plan-pozn">Schéma, nie v&nbsp;mierke</p>
+    </div>
+    <div class="plan-volby" role="tablist" aria-label="Miesta v areáli">
+      {% for b in data.areal %}<button type="button" role="tab" id="volba-{{ b.id }}" aria-controls="bod-{{ b.id }}" aria-selected="{{ 'true' if loop.first else 'false' }}" data-bod="{{ b.id }}">{{ b.nazov }}</button>{% endfor %}
+    </div>
+    <div class="plan-panely">
+      {% for b in data.areal %}
+      <article class="bod-panel" id="bod-{{ b.id }}" role="tabpanel" aria-labelledby="volba-{{ b.id }}"{% if not loop.first %} hidden{% endif %}>
+        <div class="bod-foto">{{ img(b.foto, b.alt, sizes='(min-width: 64rem) 30rem, 92vw') }}</div>
+        <div class="bod-telo">
+          <h3>{{ b.nazov }}</h3>
+          <p>{{ b.text }}</p>
+          {% if b.cena %}<p class="bod-cena">{{ b.cena }}</p>{% endif %}
+          <a class="odkaz" href="{{ b.odkaz }}">Viac o&nbsp;tom</a>
+        </div>
+      </article>{% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="sekcia ubytovanie" id="ubytovanie">
+  <div class="obal">
+    <header class="sekcia-hlava">
+      <h2>Ubytovanie</h2>
+      <p class="uvod">Osem izieb na poschodí penziónu, každá s&nbsp;vlastnou kúpeľňou. Nábytok je vyrobený na zákazku z&nbsp;masívneho dreva. Ubytujeme jednotlivcov, partie aj rodiny s&nbsp;deťmi – spolu 26 lôžok.</p>
+    </header>
+    <div class="ubyt-mriezka">
+      <figure class="ubyt-velka">{{ img('izba.jpg', 'Dvojlôžková izba s manželskou posteľou a prístelkou, nábytok z masívu', sizes='(min-width: 64rem) 40rem, 92vw') }}</figure>
+      <figure class="ubyt-mala">{{ img('kupelna.jpg', 'Kúpeľňa s umývadlom a sprchovým kútom v izbe', sizes='(min-width: 64rem) 19rem, 46vw') }}</figure>
+      <figure class="ubyt-mala">{{ img('izba-2.jpg', 'Izba s dvoma posteľami a oknom do zelene', sizes='(min-width: 64rem) 19rem, 46vw') }}</figure>
+      <div class="cennik">
+        <h3>Cenník ubytovania <span>za izbu / noc</span></h3>
+        {% for i in data.ubytovanie.izby %}
+        <div class="cennik-polozka">
+          <p class="cennik-nazov">{% if i.get("odkaz") %}<a href="{{ url(i.odkaz) }}">{{ i.nazov }}</a>{% else %}{{ i.nazov }}{% endif %} <span class="pocet">{{ i.pocet }}×</span></p>
+          <dl>{% for c in i.ceny %}<div><dt>{{ c[0] }}</dt><dd>{{ c[1] }}</dd></div>{% endfor %}</dl>
+        </div>{% endfor %}
+        <ul class="cennik-pozn" role="list">{% for p in data.ubytovanie.poznamky %}<li>{{ p }}</li>{% endfor %}</ul>
+      </div>
+    </div>
+    <ul class="vybava" role="list">{% for v in data.ubytovanie.vybava %}<li>{{ v }}</li>{% endfor %}</ul>
+    <a class="apartman-pas" href="{{ url('apartman') }}">
+      <span class="apartman-foto">{{ img('apartman-obyvacka.jpg', 'Obývačka apartmánu so sedačkou, televízorom a jedálenským stolom', sizes='(min-width: 64rem) 26rem, 92vw') }}</span>
+      <span class="apartman-text"><strong>Apartmán 70&nbsp;m² až pre 8 osôb</strong><span>Dve spálne, obývačka s&nbsp;kuchyňou, klimatizácia. Pre rodiny a&nbsp;partie, ktoré chcú byť spolu.</span><span class="odkaz">Pozrieť apartmán</span></span>
+    </a>
+  </div>
+</section>
+
+<section class="sekcia sport" id="sport">
+  <div class="obal">
+    <header class="sekcia-hlava">
+      <h2>Šport v&nbsp;areáli</h2>
+      <p class="uvod">Tenis celý rok – v&nbsp;lete na antuke, v&nbsp;zime v&nbsp;krytej hale. Kurty a&nbsp;bowling si môžete prenajať aj bez ubytovania.</p>
+    </header>
+
+    <div class="tenis">
+      <figure class="tenis-foto">{{ img('kurty.jpg', 'Antukový kurt TKM so sieťou a kopcami nad Betliarom', sizes='(min-width: 64rem) 46rem, 92vw') }}</figure>
+      <div class="tenis-text">
+        <h3>Antukové kurty</h3>
+        <p>Štyri vonkajšie antukové dvorce. Hráme na nich rekreačne, trénujeme aj organizujeme turnaje – firemné turnaje so zľavou.</p>
+        <dl class="ceny">
+          <div><dt>Kurt</dt><dd>6 € / hod.</dd></div>
+          <div><dt>Tréner</dt><dd>15 € / hod. + kurt</dd></div>
+        </dl>
+      </div>
+    </div>
+
+    <div class="hala" id="hala">
+      <div class="hala-text">
+        <h3>Krytá hala</h3>
+        <p>Zimná sezóna trvá od 15. októbra do 15. apríla. Cena za hodinu podľa dňa a&nbsp;času:</p>
+        <ul class="hala-legenda" role="list">{% for p in data.hala.pasma %}<li class="{{ p.trieda }}"><span>{{ p.popis }}</span><strong>{{ p.cena }} €</strong></li>{% endfor %}</ul>
+        <ul class="hala-doplnky" role="list">{% for d in data.hala.doplnky %}<li>{{ d }}</li>{% endfor %}</ul>
+      </div>
+      <div class="rozpis" aria-hidden="true">
+        <div class="rozpis-roh"></div>
+        {% for d in data.hala.dni %}<div class="rozpis-den">{{ d }}</div>{% endfor %}
+        {% for h in range(data.hala.od, data.hala.do) %}
+          <div class="rozpis-hod">{{ h }}:00</div>
+          {% for di in range(7) %}{% for p in data.hala.pasma %}{% if di in p.dni and p.od <= h < p.do %}<div class="rozpis-slot {{ p.trieda }}" title="{{ data.hala.dni[di] }} {{ h }}:00 – {{ p.cena }} €">{% if h == p.od and (di == p.dni[0]) %}{{ p.cena }} €{% endif %}</div>{% endif %}{% endfor %}{% endfor %}
+        {% endfor %}
+      </div>
+      <figure class="hala-foto">{{ img('hala.jpg', 'Hráči v krytej tenisovej hale TKM Betliar', sizes='(min-width: 64rem) 24rem, 92vw') }}</figure>
+    </div>
+
+    <div class="dvojica">
+      <article>
+        <figure>{{ img('bowling.jpg', 'Bowlingová dráha s drevenými stenami a kreslami', sizes='(min-width: 64rem) 34rem, 92vw') }}</figure>
+        <h3>Bowling</h3>
+        <p>Dráha pod jednou strechou s&nbsp;reštauráciou. Na večer s&nbsp;partiou, firemnú akciu aj narodeniny.</p>
+        <p class="bod-cena">od 10 € / hod.</p>
+      </article>
+      <article>
+        <figure>{{ img('fitness.jpg', 'Posilňovňa so strojmi, bežeckým pásom a rebrinami', sizes='(min-width: 64rem) 34rem, 92vw') }}</figure>
+        <h3>Posilňovňa</h3>
+        <p>3 € za hodinu na osobu. Kondičného trénera dohodneme – deti 6,60 €, dorast 8,30 €, dospelí 10 € (+&nbsp;2,50 € posilňovňa).</p>
+        <p class="bod-cena">3 € / hod.</p>
+      </article>
+    </div>
+
+    <div class="turnaje">
+      <div class="turnaje-text">
+        <h3>Turnaje, kempy a&nbsp;tréningy mládeže</h3>
+        <p>V&nbsp;lete sa na kurtoch hrajú turnaje dospelých aj detí a&nbsp;bežia tenisové kempy. Pre mládež sú tenisovo-kondičné tréningy, ktoré zlepšujú rýchlosť, techniku aj silu.</p>
+        <a class="odkaz" href="https://www.instagram.com/penzion_tkm/" rel="noopener">Fotky z&nbsp;turnajov na Instagrame</a>
+      </div>
+      <figure class="turnaje-a">{{ img('turnaj.jpg', 'Účastníci letného tenisového turnaja na antukovom kurte TKM', sizes='(min-width: 64rem) 30rem, 92vw') }}</figure>
+      <figure class="turnaje-b">{{ img('kemp.jpg', 'Deti z tenisového kempu s raketami na kurte', sizes='(min-width: 64rem) 22rem, 92vw') }}</figure>
+    </div>
+  </div>
+</section>
+
+<section class="sekcia restauracia" id="restauracia">
+  <div class="obal">
+    <div class="rest-mriezka">
+      <header class="rest-hlava">
+        <h2>Reštaurácia, pizzeria a&nbsp;bar</h2>
+        <p>Pre hostí varíme podľa jedálneho lístka aj na želanie. Pripravíme pohostenie na firemné akcie, rodinné oslavy a&nbsp;spoločenské udalosti – treba sa len vopred dohodnúť.</p>
+        <p>V&nbsp;bare na prízemí beží na širokouhlom televízore živý prenos z&nbsp;tenisovej haly.</p>
+        <a class="odkaz odkaz-svetly" href="https://www.instagram.com/penzion_tkm/" rel="noopener">Novinky z&nbsp;kuchyne na Instagrame</a>
+      </header>
+      <figure class="rest-a">{{ img('restauracia.jpg', 'Drevená reštaurácia s lavicami a vstupom do bowlingu', sizes='(min-width: 64rem) 32rem, 92vw') }}</figure>
+      <figure class="rest-b">{{ img('jedlo.jpg', 'Studené misy a pohostenie na oslavu', sizes='(min-width: 64rem) 24rem, 92vw') }}</figure>
+      <figure class="rest-c">{{ img('oslava.jpg', 'Slávnostne prestretý stôl s tulipánmi', sizes='(min-width: 64rem) 24rem, 92vw') }}</figure>
+      <figure class="rest-d">{{ img('bar.jpg', 'Bar s televízorom a barovými stoličkami', sizes='(min-width: 64rem) 22rem, 92vw') }}</figure>
+    </div>
+  </div>
+</section>
+
+<section class="sekcia wellness" id="wellness">
+  <div class="obal wellness-in">
+    <div>
+      <h2>Privátny wellness</h2>
+      <p class="uvod">Sauna a&nbsp;vírivka len pre vás – na oddych po zápase aj na romantický večer vo dvojici.</p>
+      <p>S&nbsp;YAYA thajskou masážou z&nbsp;Rožňavy pripravujeme darčekové poukazy: párová masáž a&nbsp;privátny wellness v&nbsp;Betliari. Termín si dohodnite telefonicky alebo cez formulár.</p>
+      <a class="tlacidlo tlacidlo-cierne" href="#kontakt">Dohodnúť wellness</a>
+    </div>
+    <ul class="wellness-zoznam" role="list">
+      <li><strong>Sauna</strong><span>privátne, len pre vás</span></li>
+      <li><strong>Vírivka</strong><span>na oddych po zápase</span></li>
+      <li><strong>Párová masáž</strong><span>darčekový poukaz s&nbsp;YAYA Rožňava</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="sekcia okolie" id="okolie">
+  <div class="obal okolie-in">
+    <header>
+      <h2>Výlety z&nbsp;Betliara</h2>
+      <p class="uvod">Penzión je dobrým východiskom do Slovenského krasu aj Slovenského raja. Kaštieľ s&nbsp;parkom máte na prechádzku.</p>
+      <a class="odkaz" href="{{ url('okolie') }}">Pamiatky a&nbsp;okolie</a>
+    </header>
+    <ol class="trasa" role="list">
+      <li class="trasa-start"><span class="trasa-km">0 km</span><span>Penzión TKM</span></li>
+      {% for v in data.okolie.vylety %}<li><span class="trasa-km">{{ v.km }} km</span><span>{{ v.nazov }}</span></li>{% endfor %}
+    </ol>
+  </div>
+</section>
+
+<section class="sekcia kontakt" id="kontakt">
+  <div class="obal kontakt-in">
+    <div class="kontakt-info">
+      <h2>Rezervácia</h2>
+      <p class="uvod">Zavolajte alebo napíšte, kedy prídete a&nbsp;koľko vás bude. Ozveme sa s&nbsp;voľnými termínmi.</p>
+      <p class="kontakt-tel"><a href="tel:{{ site.kontakt.telefon|replace(' ', '') }}">{{ site.kontakt.telefon_zobraz }}</a><a href="tel:{{ site.kontakt.telefon2|replace(' ', '') }}">{{ site.kontakt.telefon2_zobraz }}</a></p>
+      <p><a href="mailto:{{ site.kontakt.email }}">{{ site.kontakt.email }}</a></p>
+      <p>{{ site.kontakt.adresa.ulice }}, {{ site.kontakt.adresa.psc }} {{ site.kontakt.adresa.mesto }}<br><a class="odkaz" href="https://www.google.com/maps/search/?api=1&amp;query={{ site.kontakt.gps }}" rel="noopener">Navigovať</a></p>
+      <a class="fb-odporuca" href="https://www.facebook.com/PenzionTKM/reviews" rel="noopener"><strong>100 % odporúča</strong><span>17 recenzií na Facebooku</span></a>
+    </div>
+    {% include "_formular.html" %}
+  </div>
+</section>
+{% endblock %}

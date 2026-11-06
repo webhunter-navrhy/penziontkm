@@ -1,0 +1,143 @@
+{
+  "firma": "Penzión TKM Betliar",
+  "prevadzkovatel": "ALBATROS TOUR Rožňava, s.r.o.",
+  "ico": "36215511",
+  "obor": "penzión + športovo-relaxačný areál (tenis, bowling, fitness, wellness, reštaurácia/pizzeria)",
+  "mesto": "Betliar (okres Rožňava, Gemer)",
+  "jazyk": "sk",
+  "kontakty": {
+    "telefon": [
+      "0905 513 186",
+      "0905 439 667"
+    ],
+    "email": "penziontkm@penziontkm.sk",
+    "adresa": "Polomská 553, 049 21 Betliar",
+    "gps": [
+      48.70276,
+      20.49988
+    ],
+    "web": "https://www.penziontkm.sk/",
+    "facebook": "https://www.facebook.com/PenzionTKM/",
+    "instagram": "https://www.instagram.com/penzion_tkm/"
+  },
+  "klient_kontakt": "Rudy (WhatsApp 5. 11. 2026, cez Rafaela)",
+  "cielova_skupina": "rodiny s deťmi, tenisti a tenisové kempy/turnaje, firmy (teambuilding, oslavy), turisti ku kaštieľu Betliar, Slovenský kras a raj",
+  "ton": "priateľský rodinný areál, športový, bez nafúknutých fráz",
+  "brand": {
+    "logo": "static/img/logo.svg – prekreslené do vektora podľa obrázka loga, ktorý poslal Rafael v chate 6. 11. 2026 (oblúk + tenisová loptička + TKM čierne Montserrat ExtraBold + Betliar žlté); originál súboru chýba",
+    "farby": {
+      "ink": "#111111",
+      "zlta_loptickova": "#F2E15F",
+      "antuka_z_fotiek": "#B85A2B"
+    },
+    "pismo_loga": "Montserrat (geometrická groteska)"
+  },
+  "fotky": [
+    {
+      "subor": "_research/foto/wp/*",
+      "zdroj": "penziontkm.sk wp-content/uploads (2016–2023), vlastné fotky klienta",
+      "rozlisenie": "1440–2560 px, izby 2023 2560×1920"
+    },
+    {
+      "subor": "_research/foto/tg/*",
+      "zdroj": "travelguide.sk katalóg penziónu (fotky klienta, 2017), 800 px",
+      "rozlisenie": "800×450/600, staršie 500 px"
+    },
+    {
+      "subor": "_research/foto/ig/*",
+      "zdroj": "instagram.com/penzion_tkm (7–11/2026)",
+      "rozlisenie": "1080"
+    }
+  ],
+  "fakta": [
+    {
+      "fakt": "Areál TKM v obci Betliar kúsok od hlavného cestného ťahu Rožňava – Poprad; športovo-relaxačný areál pre jednotlivcov, skupiny aj rodiny; ubytovanie, stravovanie, prenájom športových plôch",
+      "zdroj": "penziontkm.sk – O nás"
+    },
+    {
+      "fakt": "Na konci obce Betliar smerom na Gemerskú Polomku; kaštieľ Betliar asi 1,5 km",
+      "zdroj": "travelguide.sk/svk/ubytovanie/penzion-tkm-betliar_100463_0_1.html"
+    },
+    {
+      "fakt": "8 izieb: 5× dvojlôžková s balkónom, 2× dvojlôžková, 1× apartmán; vlastná kúpeľňa (sprchovací kút, umývadlo, WC); nábytok na zákazku z masívu; LCD TV",
+      "zdroj": "penziontkm.sk"
+    },
+    {
+      "fakt": "Kapacita 26 lôžok (postelí)",
+      "zdroj": "penziontkm.sk + Facebook PenzionTKM (Úvod: Ubytovanie 26 lôžok)"
+    },
+    {
+      "fakt": "Bar na prízemí so širokouhlým TV a živým prenosom z tenisovej haly",
+      "zdroj": "penziontkm.sk"
+    },
+    {
+      "fakt": "Cenník/noc: dvojlôžková izba (aj s balkónom) 2 os. 50 €, 1 os. 34 €; apartmán 1 spálňa 1–2 os. 65 €, 3–4 os. 85 €; apartmán 2 spálne 1–4 os. 120 €, 6 os. 160 €, 8 os. 190 €; prístelka v 2 izbách; miestna daň 1 €/os./noc; check-in 14:00–21:00, check-out do 10:00",
+      "zdroj": "penziontkm.sk – Cenník ubytovania"
+    },
+    {
+      "fakt": "Apartmán 70 m², 2 spálne s 2+1 lôžkom, obývačka s rozkladacou sedačkou, smart TV, sedenie pre 8 osôb pri dvoch stoloch, klimatizácia, kuchyňa, WC, kúpeľňa, min. 2 noci",
+      "zdroj": "penziontkm.sk/apartman/"
+    },
+    {
+      "fakt": "Reštaurácia/pizzeria pre ubytovaných: jedálny lístok aj jedlo na požiadanie; catering pre firemné akcie a oslavy po dohode",
+      "zdroj": "penziontkm.sk – Stravovanie; regiongemer.sk (pizzeria)"
+    },
+    {
+      "fakt": "Tenis: 4 vonkajšie antukové kurty + 1 krytý kurt (hala); kurt 6 €/hod., tréner 15 €/hod. + kurt; firemné turnaje, organizácia turnajov",
+      "zdroj": "Facebook PenzionTKM (4 vonkajšie + 1 krytý), penziontkm.sk (ceny)"
+    },
+    {
+      "fakt": "Tenisová hala, zimná sezóna 15. 10. – 15. 4.: Po–Pi 7–12 h 12 €/hod., 12–22 h 15 €/hod.; So–Ne 7–22 h 9 €/hod.; tréner 15 €/hod.; permanentky, zľava pri sezónnej rezervácii; kamerový systém, záznam hry na požiadanie",
+      "zdroj": "penziontkm.sk"
+    },
+    {
+      "fakt": "Posilňovňa 3 €/hod./os.; kondičný tréner na objednávku",
+      "zdroj": "penziontkm.sk"
+    },
+    {
+      "fakt": "Bowling od 10 €/hod.",
+      "zdroj": "penziontkm.sk"
+    },
+    {
+      "fakt": "Privátny wellness v Betliari: sauna, vírivka; spolupráca s YAYA thajská masáž Rožňava (darčekový poukaz párová masáž + privátny wellness)",
+      "zdroj": "Instagram post 2. 11. 2026, Facebook (s Ya Ya Thaimasage)"
+    },
+    {
+      "fakt": "Detské ihrisko, letná terasa, záhrada, stolný tenis, monitorované parkovisko 20–25 áut s uzamykateľnou bránou, WiFi zdarma, psy povolené",
+      "zdroj": "travelguide.sk"
+    },
+    {
+      "fakt": "Facebook: 100 % odporúča (17 recenzií)",
+      "zdroj": "facebook.com/PenzionTKM, stav 6. 11. 2026"
+    },
+    {
+      "fakt": "Letné tenisové turnaje a kempy v areáli (fotky 7–8/2026), tenisovo-kondičné tréningy pre mládež",
+      "zdroj": "Instagram penzion_tkm"
+    },
+    {
+      "fakt": "Okolie: kaštieľ Betliar 1,2–1,5 km, Rožňava ~7 km, hrad Krásna Hôrka 12 km, Krásnohorská jaskyňa 15 km, Ochtinská aragonitová jaskyňa 20 km, Gombasecká jaskyňa 21 km, lyžovanie Mraznica/Rejdová ~24–25 km; Slovenský kras, Slovenský raj",
+      "zdroj": "travelguide.sk (vzdialenosti), penziontkm.sk"
+    },
+    {
+      "fakt": "Pamiatky Betliara: rím.-kat. kostol sv. Alžbety (1. pol. 14. st.), evanjelický kostol a. v. (1786, veža 1826), kaštieľ (zač. 18. st., múzeum od 1949)",
+      "zdroj": "penziontkm.sk – História"
+    },
+    {
+      "fakt": "Prevádzkovateľ ALBATROS TOUR Rožňava, s.r.o., IČO 36 215 511, sídlo Polomská 553, 049 21 Betliar",
+      "zdroj": "orsr.sk výpis ID 15464"
+    },
+    {
+      "fakt": "Kondičný tréner 1 hod. + 2,50 € cena posilňovne: deti 6,60 €, dorast 8,30 €, dospelí 10,00 €",
+      "zdroj": "penziontkm.sk (úvodná stránka, overené 6. 11. 2026)"
+    }
+  ],
+  "chybi": [
+    "originál loga v súbore (SVG/PDF/PNG vo vysokom rozlíšení) – teraz je prekreslené",
+    "nové fotky (Rudy ich posiela z počítača) – hlavne wellness (sauna, vírivka), reštaurácia, izby s balkónom, krytá hala dnes",
+    "aktuálny cenník (Rudy ho posiela) – ceny sú zo starého webu; apartmán má na starom webe dva rôzne cenníky (120/160/190 vs. 110/150/180)",
+    "cena a podmienky privátneho wellnessu",
+    "otváracie hodiny reštaurácie/pizzerie, jedálny lístok",
+    "squash – je ešte v prevádzke? (na fotkách 2017, na FB už nie je)",
+    "letná sezóna vonkajších kurtov (od kedy do kedy) a permanentky"
+  ]
+}

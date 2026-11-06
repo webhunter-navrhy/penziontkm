@@ -1,0 +1,37 @@
+{
+  "slug": "penziontkm",
+  "nazev": "Penzión TKM Betliar",
+  "url": "https://webhunter-navrhy.github.io/penziontkm/",
+  "base": "/penziontkm/",
+  "lang": "sk",
+  "popis": "Penzión TKM v Betliari: 8 izieb a apartmán, 4 antukové kurty a krytá tenisová hala, bowling, fitness, wellness a reštaurácia pri ceste Rožňava – Poprad.",
+  "navrh": true,
+  "domena": "",
+  "og_image": "penzion.jpg",
+  "logo": "img/logo.svg",
+  "theme_color": "#FAF8F1",
+  "typ": "LodgingBusiness",
+  "ico": "36215511",
+  "prevadzkovatel": "ALBATROS TOUR Rožňava, s.r.o.",
+  "kontakt": {
+    "email": "penziontkm@penziontkm.sk",
+    "telefon": "+421 905 513 186",
+    "telefon_zobraz": "0905 513 186",
+    "telefon2": "+421 905 439 667",
+    "telefon2_zobraz": "0905 439 667",
+    "adresa": {"ulice": "Polomská 553", "psc": "049 21", "mesto": "Betliar", "zeme": "SK"},
+    "gps": "48.70276,20.49988"
+  },
+  "oteviraci_doba": [],
+  "sameas": ["https://www.facebook.com/PenzionTKM/", "https://www.instagram.com/penzion_tkm/", "https://www.penziontkm.sk/"],
+  "cenove_rozpeti": "34–190 € / noc",
+  "formular": {"endpoint": "", "demo": true, "predmet": "Rezervácia z webu – Penzión TKM"},
+  "nav": [
+    {"text": "Ubytovanie", "href": "#ubytovanie"},
+    {"text": "Areál", "href": "#areal"},
+    {"text": "Šport", "href": "#sport"},
+    {"text": "Reštaurácia", "href": "#restauracia"},
+    {"text": "Okolie", "href": "okolie"},
+    {"text": "Kontakt", "href": "#kontakt"}
+  ]
+}

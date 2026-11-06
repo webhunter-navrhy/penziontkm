@@ -1,0 +1,11 @@
+{
+  "sezona": "15. 10. – 15. 4.",
+  "dni": ["Po", "Ut", "St", "Št", "Pi", "So", "Ne"],
+  "od": 7, "do": 22,
+  "pasma": [
+    {"dni": [0,1,2,3,4], "od": 7, "do": 12, "cena": 12, "trieda": "rano", "popis": "Po – Pi, 7:00 – 12:00"},
+    {"dni": [0,1,2,3,4], "od": 12, "do": 22, "cena": 15, "trieda": "vecer", "popis": "Po – Pi, 12:00 – 22:00"},
+    {"dni": [5,6], "od": 7, "do": 22, "cena": 9, "trieda": "vikend", "popis": "So – Ne, 7:00 – 22:00"}
+  ],
+  "doplnky": ["Tréner 15 € / hod.", "Permanentky a zľava pri rezervácii na celú sezónu", "Kamerový systém – záznam hry na požiadanie"]
+}

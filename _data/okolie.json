@@ -1,0 +1,42 @@
+{
+  "vylety": [
+    {
+      "nazov": "Kaštieľ Betliar a park",
+      "km": "1,5"
+    },
+    {
+      "nazov": "Rožňava",
+      "km": "7"
+    },
+    {
+      "nazov": "Hrad Krásna Hôrka",
+      "km": "12"
+    },
+    {
+      "nazov": "Krásnohorská jaskyňa",
+      "km": "15"
+    },
+    {
+      "nazov": "Ochtinská aragonitová jaskyňa",
+      "km": "20"
+    },
+    {
+      "nazov": "Gombasecká jaskyňa",
+      "km": "21"
+    }
+  ],
+  "pamiatky": [
+    {
+      "nazov": "Kaštieľ Betliar",
+      "text": "Renesančno-barokový kaštieľ zo začiatku 18. storočia, klasicisticky prestavaný v roku 1795 a v historizujúcom slohu upravený v roku 1880. Od roku 1949 slúži ako múzeum – nábytok od 17. do 20. storočia, portréty a zbierky bývalých majiteľov."
+    },
+    {
+      "nazov": "Rímskokatolícky kostol sv. Alžbety vdovy",
+      "text": "Stredoveká stavba z 1. polovice 14. storočia, upravovaná v 17. a 19. storočí – najstaršia pamiatka obce. Na mieste kostola stála už v 14. storočí kaplnka. Na hlavnom oltári je obraz sv. Alžbety vdovy."
+    },
+    {
+      "nazov": "Evanjelický kostol augsburského vyznania",
+      "text": "Postavený v roku 1786 po tolerančnom patente cisára Jozefa II., podľa vtedajších predpisov bez veže a zvonov. Klasicistická veža pribudla až v roku 1826."
+    }
+  ]
+}

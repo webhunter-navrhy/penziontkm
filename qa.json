@@ -1,0 +1,69 @@
+{
+  "url": "http://localhost:8811/penziontkm/",
+  "ok": true,
+  "chyby": [],
+  "varovani": [
+    "Web má noindex (u ostrého webu pravděpodobně chyba)"
+  ],
+  "metriky": {
+    "sirky": {
+      "1440": {
+        "scrollWidth": 1440,
+        "pocet_pretekajicich": 0
+      },
+      "1280": {
+        "scrollWidth": 1280,
+        "pocet_pretekajicich": 0
+      },
+      "1024": {
+        "scrollWidth": 1024,
+        "pocet_pretekajicich": 0
+      },
+      "820": {
+        "scrollWidth": 820,
+        "pocet_pretekajicich": 0
+      },
+      "390": {
+        "scrollWidth": 390,
+        "pocet_pretekajicich": 0
+      },
+      "360": {
+        "scrollWidth": 360,
+        "pocet_pretekajicich": 0
+      }
+    },
+    "preneseno_PC_MB": 1.04,
+    "nejvetsi_obrazek_PC": {
+      "kB": 147,
+      "url": "http://localhost:8811/penziontkm/img/penzion-1440.webp"
+    },
+    "snimku_PC": 11,
+    "preneseno_mobil_MB": 1.48,
+    "nejvetsi_obrazek_mobil": {
+      "kB": 183,
+      "url": "http://localhost:8811/penziontkm/img/kemp-1080.webp"
+    },
+    "snimku_mobil": 15,
+    "seo": {
+      "title": "Penzión TKM Betliar – ubytovanie, tenis, bowling a reštaurácia",
+      "description": "Penzión TKM v Betliari: 8 izieb a apartmán, 4 antukové kurty a krytá tenisová hala, bowling, fitness",
+      "lang": "sk",
+      "h1": 1,
+      "jsonld": [
+        true
+      ],
+      "robots": "noindex, nofollow",
+      "og_image": "https://webhunter-navrhy.github.io/penziontkm/og.jpg",
+      "bez_v": [],
+      "canonical": true,
+      "viewport": true
+    },
+    "maly_dotykovy_cil": 0,
+    "font_nadpis": "Montserrat",
+    "font_text": "Montserrat",
+    "podstranky": {
+      "stranek": 3,
+      "obrazku": 51
+    }
+  }
+}

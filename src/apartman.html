@@ -1,0 +1,49 @@
+{% extends "_base.html" %}
+{% set titulek = 'Apartmán pre 8 osôb – Penzión TKM Betliar' %}
+{% set popis = 'Apartmán 70 m² v Penzióne TKM Betliar: dve spálne, obývačka s kuchyňou, klimatizácia, sedenie pre 8 osôb. Od 65 € za noc.' %}
+{% set cesta = 'apartman/' %}
+{% block obsah %}
+<section class="sekcia podstranka-hlava">
+  <div class="obal apt-hlava">
+    <div>
+      <p class="hero-miesto"><a href="{{ url('') }}#ubytovanie">Ubytovanie</a> · Apartmán</p>
+      <h1>Apartmán pre rodinu aj partiu</h1>
+      <p class="uvod">70&nbsp;m² na poschodí penziónu: dve spálne s&nbsp;lôžkami 2&nbsp;+&nbsp;1, obývačka s&nbsp;rozkladacou sedačkou a&nbsp;kuchyňa. Pri dvoch stoloch sa spolu najete až ôsmi.</p>
+    </div>
+    <figure class="apt-hero oblukovy-ram">{{ img('apartman-obyvacka.jpg', 'Obývačka apartmánu so sedačkou, smart TV a jedálenským stolom', sizes='(min-width: 64rem) 52vw, 100vw') }}</figure>
+  </div>
+</section>
+<section class="sekcia apt-detail">
+  <div class="obal apt-mriezka">
+    <figure class="apt-foto">{{ img('apartman-kuchyna.jpg', 'Kuchyňa apartmánu s chladničkou, linkou a jedálenským stolom', sizes='(min-width: 64rem) 40rem, 92vw') }}</figure>
+    <div>
+      <h2>Čo v&nbsp;apartmáne nájdete</h2>
+      <ul class="vybava vybava-stlpec" role="list">
+        <li>2 spálne, v&nbsp;každej lôžka 2&nbsp;+&nbsp;1</li>
+        <li>obývačka s&nbsp;rozkladacou sedačkou a&nbsp;smart TV</li>
+        <li>kuchyňa a&nbsp;sedenie pre 8 osôb pri dvoch stoloch</li>
+        <li>klimatizácia</li>
+        <li>kúpeľňa a&nbsp;samostatné WC</li>
+        <li>minimálny pobyt 2 noci</li>
+      </ul>
+    </div>
+    <div class="cennik cennik-apt">
+      <h3>Cenník apartmánu <span>za noc</span></h3>
+      {% for i in data.ubytovanie.izby if i.nazov.startswith('Apartmán') %}
+      <div class="cennik-polozka">
+        <p class="cennik-nazov">{{ i.nazov }}</p>
+        <dl>{% for c in i.ceny %}<div><dt>{{ c[0] }}</dt><dd>{{ c[1] }}</dd></div>{% endfor %}</dl>
+      </div>{% endfor %}
+      <ul class="cennik-pozn" role="list"><li>Miestna daň 1 € / osoba / noc.</li><li>Príchod 14:00 – 21:00, odchod do 10:00.</li></ul>
+      <a class="tlacidlo tlacidlo-zlte" href="{{ url('') }}#kontakt">Rezervovať apartmán</a>
+    </div>
+  </div>
+</section>
+<section class="sekcia apt-dalej">
+  <div class="obal">
+    <h2>Po raňajkách na kurt</h2>
+    <p class="uvod">Z&nbsp;apartmánu je to pár krokov na antukové kurty, do haly, na bowling aj do reštaurácie. Deti majú pri penzióne ihrisko a terasu.</p>
+    <a class="odkaz" href="{{ url('') }}#areal">Pozrieť plán areálu</a>
+  </div>
+</section>
+{% endblock %}

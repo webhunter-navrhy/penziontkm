@@ -1,0 +1,47 @@
+{% extends "_base.html" %}
+{% set titulek = 'Okolie a pamiatky Betliara – Penzión TKM' %}
+{% set popis = 'Výlety z Penziónu TKM Betliar: kaštieľ Betliar 1,5 km, Krásna Hôrka, Krásnohorská, Ochtinská a Gombasecká jaskyňa, Slovenský kras a raj.' %}
+{% set cesta = 'okolie/' %}
+{% block obsah %}
+<section class="sekcia podstranka-hlava">
+  <div class="obal okolie-hlava">
+    <div>
+      <p class="hero-miesto">Betliar · Gemer</p>
+      <h1>Okolie Betliara</h1>
+      <p class="uvod">Betliar leží medzi Slovenským krasom a&nbsp;Slovenským rajom. Kaštieľ s&nbsp;parkom je na prechádzku, jaskyne a&nbsp;hrady na poldňový výlet autom.</p>
+    </div>
+    <figure class="okolie-foto oblukovy-ram">{{ img('penzion-hory.jpg', 'Penzión TKM s ihriskom a kopcami nad Betliarom', sizes='(min-width: 64rem) 34rem, 92vw') }}</figure>
+  </div>
+</section>
+<section class="sekcia">
+  <div class="obal okolie-in">
+    <header>
+      <h2>Vzdialenosti od penziónu</h2>
+      <p class="uvod">Približne, autom po ceste.</p>
+    </header>
+    <ol class="trasa" role="list">
+      <li class="trasa-start"><span class="trasa-km">0 km</span><span>Penzión TKM, Polomská 553</span></li>
+      {% for v in data.okolie.vylety %}<li><span class="trasa-km">{{ v.km }} km</span><span>{{ v.nazov }}</span></li>{% endfor %}
+    </ol>
+  </div>
+</section>
+<section class="sekcia pamiatky">
+  <div class="obal">
+    <h2>Kultúrne pamiatky obce</h2>
+    <div class="pamiatky-zoznam">
+      {% for p in data.okolie.pamiatky %}
+      <article>
+        <h3>{{ p.nazov }}</h3>
+        <p>{{ p.text }}</p>
+      </article>{% endfor %}
+    </div>
+  </div>
+</section>
+<section class="sekcia apt-dalej">
+  <div class="obal">
+    <h2>Po výlete späť do Betliara</h2>
+    <p class="uvod">Večer bowling, sauna alebo hodina tenisu v&nbsp;hale. Izbu vám radi pripravíme.</p>
+    <a class="tlacidlo tlacidlo-zlte" href="{{ url('') }}#kontakt">Rezervovať pobyt</a>
+  </div>
+</section>
+{% endblock %}

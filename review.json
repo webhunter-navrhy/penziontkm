@@ -1,0 +1,17 @@
+{
+  "znamka": 8,
+  "slabiny": [
+    "Hero na PC (buňka 1): fotka přes celou šířku je v pořádku, ale tlačítko „Rezervovať pobyt“ a řádek „alebo volajte 0905 513 186“ jsou na 1440 px useknuté na spodním okraji první obrazovky. Snížit výšku fotky asi o 80–100 px nebo kartu s H1 posunout výš, aby bylo CTA celé vidět bez scrollu.",
+    "Privátny wellness (PC buňka 10, mobil buňky 12–13): poznámka „doplníme“ zmizela a sekce teď funguje jako žlutý textový blok, ale je to jediná sekce o službě bez fotky. Až bude podklad, doplnit vpravo jednu fotku sauny nebo vírivky (Instagram 2. 11. 2026) nebo terasy v obdélníkovém ořezu, aby wellness vypadal stejně hmatatelně jako bowling a posilňovňa.",
+    "Posilňovňa (PC buňka 7, mobil buňka 9): ceny kondičního trenéra „deti 6,60 €, dorast 8,30 €, dospelí 10 € (+ 2,50 € posilňovňa)“ v brief.json nejsou, brief uvádí jen „kondičný tréner na objednávku“. Ověřit je na penziontkm.sk a doplnit do briefu se zdrojem, jinak je nahradit textem „Kondičného trénera dohodneme na objednávku“."
+  ],
+  "zavazne": [],
+  "silne": [
+    "Hero má teď fotku penziónu přes celou šířku. Na mobilu zabírá většinu první obrazovky a H1 s CTA jsou hned pod ní, oblouk s loptičkou zůstal jen jako malý detail.",
+    "Plán areálu na antukovém podkladu s klikacími štítky je jasný koncept z oboru. Navazuje na něj sport, ubytování i reštaurácia a brand (žlutá z loptičky, černá Montserrat, antuka z fotek) drží celý web pohromadě.",
+    "Rytmus je opravený: mezery pod plánem areálu jsou menší, useknutá fotka v oblouku zmizela a rozvrh haly je na mobilu sbalený do tří řádků s cenou.",
+    "Obsah sedí na brief: ceník izieb a apartmánu, ceny kurtů, haly, bowlingu a posilňovne, vzdálenosti k výletům, 100 % odporúča (17 recenzí na Facebooku), oba telefony, e-mail a adresa v kontaktu i patičce. Rezervační formulář je přehledný na PC i na mobilu."
+  ],
+  "verdikt": "odeslat – všechny tři minulé výtky jsou opravené a QA je zelená bez přetékání na všech šířkách. Zbývají drobnosti: CTA v hero na PC je na hraně obrazovky, wellness nemá fotku a ceny kondičního trenéra je potřeba ověřit.",
+  "_hash": "233a72d19b3aaef822ea0da92e278a6245b1f840"
+}
