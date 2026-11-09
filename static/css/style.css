@@ -270,6 +270,18 @@ p { margin: 0 0 1em; }
 .turnaje-pas .na-sirku img { aspect-ratio: 4 / 3; }
 .turnaje-pas .na-vysku img { aspect-ratio: 3 / 4; }
 
+.druzstva { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: clamp(2rem, 5vw, 5rem); align-items: start; margin-top: clamp(3rem, 6vw, 5rem); padding-top: clamp(2rem, 4vw, 3rem); border-top: 1.5px solid var(--ink); }
+.druzstva-foto img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 4px; }
+.druzstva-text h3 { margin: 0 0 .8rem; font-size: clamp(1.6rem, 2.8vw, 2.4rem); line-height: 1.08; letter-spacing: -.025em; }
+.druzstva-text > p { color: var(--ink-2); max-width: 32em; }
+.supiska { list-style: none; margin: 1.4rem 0 0; padding: 0; border-top: 1.5px solid var(--ink); }
+.supiska li { display: grid; grid-template-columns: 7.5rem minmax(0, 1fr); gap: 1rem; padding: .55rem 0; border-bottom: 1px solid var(--ciara); font-size: .98rem; }
+.supiska strong { font: 600 .95rem var(--font-nadpis); }
+.supiska span { color: var(--ink-2); }
+.supiska li.hlavna { background: var(--zlta); padding: .8rem .8rem; margin: .5rem 0; border-radius: 3px; border-bottom: 0; }
+.supiska li.hlavna strong { font-size: 1.15rem; }
+.supiska li.hlavna span { color: var(--ink); align-self: center; }
+.supiska-zdroj { font-size: .85rem; color: var(--ink-2); margin-top: .8rem; }
 .treningy { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(1.5rem, 5vw, 5rem); margin-top: clamp(3rem, 6vw, 5rem); padding-top: clamp(2rem, 4vw, 3rem); border-top: 1.5px solid var(--ink); }
 .treningy-hlava { display: flex; flex-direction: column; gap: 1.2rem; align-items: flex-start; }
 .treningy-hlava h3 { margin: 0; font-size: clamp(1.8rem, 3.4vw, 2.8rem); line-height: 1.05; letter-spacing: -.03em; max-width: 9em; }
@@ -294,6 +306,10 @@ p { margin: 0 0 1em; }
 .rest-c { grid-column: 5 / 9; }
 .rest-d { grid-column: 9 / 13; }
 
+.oslavy { margin-top: clamp(3rem, 6vw, 5rem); }
+.oslavy-text { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: .5rem 4rem; align-items: end; margin-bottom: 1.8rem; }
+.oslavy-text h3 { margin: 0; font-size: clamp(1.5rem, 2.4vw, 2.1rem); color: var(--papier); }
+.oslavy-text p { margin: 0; color: rgba(250, 248, 241, .8); max-width: 36em; }
 .listky { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: clamp(2.5rem, 5vw, 4rem); }
 .listok { border: 1.5px solid rgba(250, 248, 241, .35); border-radius: 4px; padding: clamp(1.4rem, 3vw, 2.2rem); }
 .listok h3 { margin: 0 0 .7rem; font-size: clamp(1.3rem, 2vw, 1.7rem); color: var(--zlta); }
@@ -312,6 +328,8 @@ p { margin: 0 0 1em; }
 .wellness-zoznam { list-style: none; margin: 0; padding: 0; border-top: 2px solid var(--ink); }
 .wellness-zoznam li { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: .2rem 1.5rem; padding: 1.1rem 0; border-bottom: 1.5px solid rgba(17,17,17,.35); }
 .wellness-zoznam strong { font: 600 clamp(1.8rem, 3.4vw, 2.8rem)/1.05 var(--font-nadpis); letter-spacing: -.03em; }
+.wellness-fotky { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 3fr) minmax(0, 4fr); gap: 1rem; margin-top: clamp(2.5rem, 5vw, 4rem); }
+.wellness-fotky img { width: 100%; height: clamp(14rem, 26vw, 24rem); object-fit: cover; border-radius: 4px; }
 .wellness-zoznam span { font-size: 1rem; color: rgba(17,17,17,.78); }
 
 /* okolie */
@@ -408,7 +426,7 @@ p { margin: 0 0 1em; }
   .ubyt-mala:nth-of-type(3) { grid-column: 7 / 13; }
   .cennik { grid-column: 1 / -1; grid-row: auto; margin-top: 1.5rem; }
   .apartman-pas { grid-template-columns: 1fr; }
-  .tenis, .treningy, .wellness-in, .okolie-in, .kontakt-in, .apt-hlava, .okolie-hlava { grid-template-columns: 1fr; }
+  .tenis, .treningy, .druzstva, .oslavy-text, .wellness-in, .okolie-in, .kontakt-in, .apt-hlava, .okolie-hlava { grid-template-columns: 1fr; }
   .apt-hero, .okolie-foto { margin: 16px 0 0 16px; }
   .rest-hlava { grid-column: 1 / -1; padding: 0 0 1rem; }
   .rest-a { grid-column: 1 / -1; }
@@ -430,6 +448,11 @@ p { margin: 0 0 1em; }
   .hala { grid-template-columns: 1fr; }
   .dvojica { grid-template-columns: 1fr; }
   .listky { grid-template-columns: 1fr; }
+  .wellness-fotky { grid-template-columns: 1fr 1fr; }
+  .wf-a { grid-column: 1 / -1; }
+  .wellness-fotky img { height: auto; aspect-ratio: 4 / 3; }
+  .wf-b img { aspect-ratio: 3 / 4; }
+  .wf-c img { height: 100%; }
   .dvojica article:nth-child(2) { margin-top: 0; }
   .rest-b, .rest-c { grid-column: span 6; }
   .rest-d { grid-column: 1 / -1; }

@@ -4,7 +4,7 @@
 {% block obsah %}
 <section class="hero">
   <figure class="hero-foto">
-    {{ img('penzion.jpg', 'Penzión TKM Betliar s kvetmi na balkónoch a kopcami v pozadí', sizes='(min-width: 96rem) 96rem, 100vw') }}
+    {{ img('2026-areal.jpg', 'Penzión TKM s detským ihriskom a trávnikom pod zalesnenými kopcami nad Betliarom', sizes='(min-width: 96rem) 96rem, 100vw') }}
     <a class="hero-odznak" href="https://www.facebook.com/PenzionTKM/reviews" rel="noopener"><strong>100&nbsp;%</strong><span>odporúča na Facebooku</span><small>17 recenzií</small></a>
   </figure>
   <div class="hero-text">
@@ -118,7 +118,7 @@
     <div class="ubyt-mriezka">
       <figure class="ubyt-velka">{{ img('izba.jpg', 'Dvojlôžková izba s manželskou posteľou a prístelkou, nábytok z masívu', sizes='(min-width: 64rem) 40rem, 92vw') }}</figure>
       <figure class="ubyt-mala">{{ img('kupelna.jpg', 'Kúpeľňa s umývadlom a sprchovým kútom v izbe', sizes='(min-width: 64rem) 19rem, 46vw') }}</figure>
-      <figure class="ubyt-mala">{{ img('izba-2.jpg', 'Izba s dvoma posteľami a oknom do zelene', sizes='(min-width: 64rem) 19rem, 46vw') }}</figure>
+      <figure class="ubyt-mala">{{ img('2026-izba.jpg', 'Izba s tromi lôžkami, stolíkom a obrazmi na stenách', sizes='(min-width: 64rem) 19rem, 46vw') }}</figure>
       <div class="cennik">
         <h3>Cenník ubytovania <span>za izbu / noc</span></h3>
         {% for i in data.ubytovanie.izby %}
@@ -145,7 +145,7 @@
     </header>
 
     <div class="tenis">
-      <figure class="tenis-foto">{{ img('kurty.jpg', 'Antukový kurt TKM so sieťou a kopcami nad Betliarom', sizes='(min-width: 64rem) 46rem, 92vw') }}</figure>
+      <figure class="tenis-foto">{{ img('2026-kurty.jpg', 'Antukové kurty TKM s muškátmi v popredí a kopcami nad Betliarom', sizes='(min-width: 64rem) 46rem, 92vw') }}</figure>
       <div class="tenis-text">
         <h3>Antukové kurty</h3>
         <p>Štyri vonkajšie antukové dvorce. Hráme na nich rekreačne, trénujeme aj organizujeme turnaje – firemné turnaje so zľavou.</p>
@@ -153,6 +153,16 @@
           <div><dt>Kurt</dt><dd>6 € / hod.</dd></div>
           <div><dt>Tréner</dt><dd>20 € / hod. + kurt</dd></div>
         </dl>
+      </div>
+    </div>
+
+    <div class="druzstva" id="druzstva">
+      <figure class="druzstva-foto">{{ img('2026-druzstvo.jpg', 'Hráči a priaznivci klubu TKM v krytej tenisovej hale', sizes='(min-width: 64rem) 40rem, 92vw') }}</figure>
+      <div class="druzstva-text">
+        <h3>Extraliga a&nbsp;ďalšie družstvá</h3>
+        <p>Muži TKM hrajú slovenskú tenisovú extraligu. Ďalšie družstvá máme v&nbsp;súťažiach od detí do 10 rokov cez žiakov a&nbsp;dorast až po mužov.</p>
+        <ul class="supiska" role="list">{% for s in data.druzstva.sutaze %}<li{% if loop.first %} class="hlavna"{% endif %}><strong>{{ s.sutaz }}</strong><span>{{ s.kategoria }}</span></li>{% endfor %}</ul>
+        <p class="supiska-zdroj">Súťaže v&nbsp;sezóne {{ data.druzstva.sezona }} podľa etenis.sk</p>
       </div>
     </div>
 
@@ -186,12 +196,12 @@
           {% for di in range(7) %}{% for p in data.hala.pasma %}{% if di in p.dni and p.od <= h < p.do %}<div class="rozpis-slot {{ p.trieda }}" title="{{ data.hala.dni[di] }} {{ h }}:00 – {{ p.cena }} €">{% if h == p.od and (di == p.dni[0]) %}{{ p.cena }} €{% endif %}</div>{% endif %}{% endfor %}{% endfor %}
         {% endfor %}
       </div>
-      <figure class="hala-foto">{{ img('hala.jpg', 'Hráči v krytej tenisovej hale TKM Betliar', sizes='(min-width: 64rem) 24rem, 92vw') }}</figure>
+      <figure class="hala-foto">{{ img('2026-hala-deti.jpg', 'Deti na tréningu v krytej tenisovej hale TKM', sizes='(min-width: 64rem) 24rem, 92vw') }}</figure>
     </div>
 
     <div class="dvojica">
       <article>
-        <figure>{{ img('bowling.jpg', 'Bowlingová dráha s drevenými stenami a kreslami', sizes='(min-width: 64rem) 34rem, 92vw') }}</figure>
+        <figure>{{ img('2026-bowling.jpg', 'Deti a tréneri s guľami na bowlingovej dráhe TKM', sizes='(min-width: 64rem) 34rem, 92vw') }}</figure>
         <h3>Bowling</h3>
         <p>Dráha pod jednou strechou s&nbsp;reštauráciou. Na večer s&nbsp;partiou, firemnú akciu aj narodeniny.</p>
         <p class="bod-cena">od 10 € / hod.</p>
@@ -211,10 +221,13 @@
         <a class="odkaz" href="https://www.instagram.com/penzion_tkm/" rel="noopener">Fotky z&nbsp;turnajov na Instagrame</a>
       </div>
       <div class="turnaje-pas">
+        <figure class="na-sirku">{{ img('2026-trening.jpg', 'Tréning detí na antukovom kurte pred penziónom', sizes='(min-width: 64rem) 28rem, 80vw') }}</figure>
         <figure class="na-sirku">{{ img('turnaj.jpg', 'Účastníci letného tenisového turnaja na antukovom kurte TKM', sizes='(min-width: 64rem) 28rem, 80vw') }}</figure>
         <figure class="na-vysku">{{ img('vitaz.jpg', 'Víťaz turnaja s pohárom a diplomom pri sieti', sizes='(min-width: 64rem) 16rem, 56vw') }}</figure>
+        <figure class="na-vysku">{{ img('2026-tkm-deti.jpg', 'Malí tenisti pod transparentom TKM Betliar', sizes='(min-width: 64rem) 16rem, 56vw') }}</figure>
         <figure class="na-vysku">{{ img('deti-kurt.jpg', 'Dvaja mladí tenisti s diplomami na antukovom kurte', sizes='(min-width: 64rem) 16rem, 56vw') }}</figure>
         <figure class="na-sirku">{{ img('kemp.jpg', 'Deti z tenisového kempu s raketami na kurte', sizes='(min-width: 64rem) 28rem, 80vw') }}</figure>
+        <figure class="na-sirku">{{ img('2026-pohare.jpg', 'Poháre pre víťazov turnaja pred vitrínou s trofejami', sizes='(min-width: 64rem) 28rem, 80vw') }}</figure>
       </div>
     </div>
   </div>
@@ -229,10 +242,24 @@
         <p>V&nbsp;bare na prízemí beží na širokouhlom televízore živý prenos z&nbsp;tenisovej haly.</p>
         <a class="odkaz odkaz-svetly" href="https://www.instagram.com/penzion_tkm/" rel="noopener">Novinky z&nbsp;kuchyne na Instagrame</a>
       </header>
-      <figure class="rest-a">{{ img('restauracia.jpg', 'Drevená reštaurácia s lavicami a vstupom do bowlingu', sizes='(min-width: 64rem) 32rem, 92vw') }}</figure>
-      <figure class="rest-b">{{ img('jedlo.jpg', 'Studené misy a pohostenie na oslavu', sizes='(min-width: 64rem) 24rem, 92vw') }}</figure>
-      <figure class="rest-c">{{ img('oslava.jpg', 'Slávnostne prestretý stôl s tulipánmi', sizes='(min-width: 64rem) 24rem, 92vw') }}</figure>
-      <figure class="rest-d">{{ img('bar.jpg', 'Bar s televízorom a barovými stoličkami', sizes='(min-width: 64rem) 22rem, 92vw') }}</figure>
+      <figure class="rest-a">{{ img('2026-restauracia-den.jpg', 'Reštaurácia s drevenými lavicami, kockovanými obrusmi a barom v pozadí', sizes='(min-width: 64rem) 32rem, 92vw') }}</figure>
+      <figure class="rest-b">{{ img('2026-jedlo.jpg', 'Bravčové s knedľou a červenou kapustou', sizes='(min-width: 64rem) 24rem, 92vw') }}</figure>
+      <figure class="rest-c">{{ img('2026-oslava-70.jpg', 'Stôl prestretý na oslavu 70. narodenín s balónmi a ružami', sizes='(min-width: 64rem) 24rem, 92vw') }}</figure>
+      <figure class="rest-d">{{ img('2026-sampanske.jpg', 'Poháre so šampanským na stole pri okne na terasu', sizes='(min-width: 64rem) 22rem, 92vw') }}</figure>
+    </div>
+    <div class="oslavy">
+      <div class="oslavy-text">
+        <h3>Oslavy a&nbsp;akcie</h3>
+        <p>Narodeniny, okrúhle jubileá aj firemné výročia. Stoly prestrieme v&nbsp;reštaurácii alebo v&nbsp;drevenom salóniku a&nbsp;varíme podľa osobitného lístka na akcie.</p>
+      </div>
+      <div class="turnaje-pas oslavy-pas">
+        <figure class="na-sirku">{{ img('2026-oslava-sala.jpg', 'Slávnostne prestretá sála s kvetinovou výzdobou', sizes='(min-width: 64rem) 28rem, 80vw') }}</figure>
+        <figure class="na-vysku">{{ img('2026-svedsky-stol.jpg', 'Bohatý švédsky stôl s mäsom, prílohami a chuťovkami', sizes='(min-width: 64rem) 16rem, 56vw') }}</figure>
+        <figure class="na-sirku">{{ img('2026-oslava-50.jpg', 'Salónik vyzdobený na 50. narodeniny so svetielkami a balónmi', sizes='(min-width: 64rem) 28rem, 80vw') }}</figure>
+        <figure class="na-sirku">{{ img('2026-jedlo-gyros.jpg', 'Kuracie gyros so zemiakmi, tzatziki a zeleninou', sizes='(min-width: 64rem) 28rem, 80vw') }}</figure>
+        <figure class="na-vysku">{{ img('2026-studene-misy.jpg', 'Pohostenie na stole: obložené misy, šaláty a dezerty', sizes='(min-width: 64rem) 16rem, 56vw') }}</figure>
+        <figure class="na-sirku">{{ img('2026-hostina.jpg', 'Dlhá slávnostná tabuľa v salóniku so svetelnou výzdobou', sizes='(min-width: 64rem) 28rem, 80vw') }}</figure>
+      </div>
     </div>
     <div class="listky" id="listok">
       {% for l in data.listky.listky %}<article class="listok" id="listok-{{ l.id }}">
@@ -248,15 +275,21 @@
   <div class="obal wellness-in">
     <div>
       <h2>Privátny wellness</h2>
-      <p class="uvod">Sauna a&nbsp;vírivka len pre vás – na oddych po zápase aj na romantický večer vo dvojici.</p>
+      <p class="uvod">Bazén, vírivka a&nbsp;sauna len pre vás – na oddych po zápase, s&nbsp;deťmi aj na romantický večer vo dvojici.</p>
       <p>S&nbsp;YAYA thajskou masážou z&nbsp;Rožňavy pripravujeme darčekové poukazy: párová masáž a&nbsp;privátny wellness v&nbsp;Betliari. Termín si dohodnite telefonicky alebo cez formulár.</p>
       <a class="tlacidlo tlacidlo-cierne" href="#kontakt">Dohodnúť wellness</a>
     </div>
     <ul class="wellness-zoznam" role="list">
+      <li><strong>Bazén</strong><span>krytý, s&nbsp;farebným osvetlením</span></li>
       <li><strong>Sauna</strong><span>privátne, len pre vás</span></li>
       <li><strong>Vírivka</strong><span>na oddych po zápase</span></li>
       <li><strong>Párová masáž</strong><span>darčekový poukaz s&nbsp;YAYA Rožňava</span></li>
     </ul>
+  </div>
+  <div class="obal wellness-fotky">
+    <figure class="wf-a">{{ img('2026-bazen.jpg', 'Krytý bazén s vírivkou a dverami do sauny', sizes='(min-width: 64rem) 44rem, 92vw') }}</figure>
+    <figure class="wf-b">{{ img('2026-sauna.jpg', 'Drevená sauna s lavicami a vedierkom', sizes='(min-width: 64rem) 18rem, 46vw') }}</figure>
+    <figure class="wf-c">{{ img('2026-bazen-svetla.jpg', 'Bazén večer s farebným osvetlením', sizes='(min-width: 64rem) 26rem, 46vw') }}</figure>
   </div>
 </section>
 
