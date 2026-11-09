@@ -7,5 +7,5 @@
     {"dni": [0,1,2,3,4], "od": 12, "do": 22, "cena": 15, "trieda": "vecer", "popis": "Po – Pi, 12:00 – 22:00"},
     {"dni": [5,6], "od": 7, "do": 22, "cena": 9, "trieda": "vikend", "popis": "So – Ne, 7:00 – 22:00"}
   ],
-  "doplnky": ["Tréner 15 € / hod.", "Permanentky a zľava pri rezervácii na celú sezónu", "Kamerový systém – záznam hry na požiadanie"]
+  "doplnky": ["Tréner 20 € / hod. + kurt", "Permanentky a zľava pri rezervácii na celú sezónu", "Kamerový systém – záznam hry na požiadanie"]
 }
