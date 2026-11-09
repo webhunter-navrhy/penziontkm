@@ -156,6 +156,21 @@
       </div>
     </div>
 
+    <div class="treningy" id="treningy">
+      <div class="treningy-hlava">
+        <span class="treningy-lopta" aria-hidden="true"></span>
+        <h3>Tenisové tréningy s&nbsp;Rudym</h3>
+      </div>
+      <div class="treningy-text">
+        <p class="uvod">Rudy je poloprofesionálny tenista. Mal na dosah okruh ITF, pribrzdilo ho zranenie – no na kurte maká ďalej a&nbsp;skúsenosti z&nbsp;turnajov odovzdáva na tréningoch.</p>
+        <p>Trénuje sa tu celý rok: v&nbsp;lete na antuke, v&nbsp;zime v&nbsp;krytej hale. Termín a&nbsp;zameranie tréningu si dohodnete priamo s&nbsp;ním.</p>
+        <dl class="ceny">
+          <div><dt>Tréning</dt><dd>15 € / hod. + kurt</dd></div>
+        </dl>
+        <a class="tlacidlo tlacidlo-cierne" href="#kontakt">Dohodnúť tréning</a>
+      </div>
+    </div>
+
     <div class="hala" id="hala">
       <div class="hala-text">
         <h3>Krytá hala</h3>
@@ -218,6 +233,13 @@
       <figure class="rest-b">{{ img('jedlo.jpg', 'Studené misy a pohostenie na oslavu', sizes='(min-width: 64rem) 24rem, 92vw') }}</figure>
       <figure class="rest-c">{{ img('oslava.jpg', 'Slávnostne prestretý stôl s tulipánmi', sizes='(min-width: 64rem) 24rem, 92vw') }}</figure>
       <figure class="rest-d">{{ img('bar.jpg', 'Bar s televízorom a barovými stoličkami', sizes='(min-width: 64rem) 22rem, 92vw') }}</figure>
+    </div>
+    <div class="listky" id="listok">
+      {% for l in data.listky.listky %}<article class="listok" id="listok-{{ l.id }}">
+        <h3>{{ l.nazov }}</h3>
+        {% if l.polozky %}<ul class="listok-polozky" role="list">{% for p in l.polozky %}<li><span>{{ p.nazov }}{% if p.popis %}<small>{{ p.popis }}</small>{% endif %}</span><strong>{{ p.cena }}</strong></li>{% endfor %}</ul>
+        {% else %}<p>{{ l.popis }}</p>{% endif %}
+      </article>{% endfor %}
     </div>
   </div>
 </section>

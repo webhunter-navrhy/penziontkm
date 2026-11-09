@@ -1,0 +1,16 @@
+{
+  "listky": [
+    {
+      "id": "listok",
+      "nazov": "Jedálny lístok",
+      "popis": "Pizza, jedlá z kuchyne a nápoje z baru. Lístok sem čoskoro doplníme – dovtedy sa na jedlo pýtajte na recepcii alebo telefonicky.",
+      "polozky": []
+    },
+    {
+      "id": "akcie",
+      "nazov": "Akcie a oslavy",
+      "popis": "Na oslavy, firemné akcie a spoločenské udalosti máme osobitný lístok. Doplníme ho sem, na vyžiadanie vám ho radi pošleme.",
+      "polozky": []
+    }
+  ]
+}
