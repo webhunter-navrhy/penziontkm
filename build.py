@@ -23,7 +23,7 @@ from PIL import Image, ImageOps
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 SRC, DATA, IMG, STATIC, DIST, CACHE = (os.path.join(ROOT, p) for p in ("src", "_data", "img", "static", "dist", ".cache/img"))
-SIRKY = (640, 1280, 1920)
+SIRKY = (640, 960, 1280, 1920)
 RASTER = (".jpg", ".jpeg", ".png", ".webp")
 
 
