@@ -129,11 +129,22 @@
     {
       "fakt": "Kondičný tréner 1 hod. + 2,50 € cena posilňovne: deti 6,60 €, dorast 8,30 €, dospelí 10,00 €",
       "zdroj": "penziontkm.sk (úvodná stránka, overené 6. 11. 2026)"
+    },
+    {
+      "fakt": "Tréner/tréning 20 € / hod. + kurt",
+      "zdroj": "WhatsApp Rudy 9. 11. 2026 (screenshot)"
+    },
+    {
+      "fakt": "Muži hrajú extraligu, ďalšie družstvá: MSR st. žiačky, I. trieda muži/dorastenci/st. žiaci/st. žiačky, II. trieda dorastenky, deti do 10 r. (DC, FC, B, D)",
+      "zdroj": "etenis.sk prehľad súťaží 2026, screenshot Rudy 9. 11.; Rudy: extraliga + 7 ďalších družstiev"
+    },
+    {
+      "fakt": "Wellness má krytý bazén s farebným osvetlením, vírivku a saunu",
+      "zdroj": "fotky od Rudyho 9. 11. 2026 (bazén odvodený z fotiek – overiť)"
     }
   ],
   "chybi": [
     "originál loga v súbore (SVG/PDF/PNG vo vysokom rozlíšení) – teraz je prekreslené",
-    "nové fotky (Rudy ich posiela z počítača) – hlavne wellness (sauna, vírivka), reštaurácia, izby s balkónom, krytá hala dnes",
     "aktuálny cenník (Rudy ho posiela) – ceny sú zo starého webu; apartmán má na starom webe dva rôzne cenníky (120/160/190 vs. 110/150/180)",
     "cena a podmienky privátneho wellnessu",
     "otváracie hodiny reštaurácie/pizzerie, jedálny lístok",
@@ -141,6 +152,7 @@
     "letná sezóna vonkajších kurtov (od kedy do kedy) a permanentky",
     "fotka Rudyho na kurte, jeho celé meno a cena tréningu (blok Tréningy s Rudym)",
     "jedálny lístok a lístok na akcie (položky do _data/listky.json)",
-    "prístup k doméne penziontkm.sk (Exohosting) na presun webu – MX pošty nechať"
+    "prístup k doméne penziontkm.sk (Exohosting) na presun webu – MX pošty nechať",
+    "fotka Rudyho na kurte (v 119 fotkách nie je jasné, ktorý je on)"
   ]
 }
