@@ -48,7 +48,7 @@ document.documentElement.classList.add('js');
 
   // jemné odhalenie pri scrolle
   if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    var ciele = document.querySelectorAll('.sekcia-hlava, .ubyt-mriezka figure, .cennik, .tenis, .hala, .dvojica article, .turnaje figure, .rest-mriezka figure, .trasa li, .pamiatky-zoznam article, .apartman-pas');
+    var ciele = document.querySelectorAll('.sekcia-hlava, .ubyt-mriezka figure, .cennik, .tenis, .hala, .dvojica article, .turnaje figure, .rest-mriezka figure, .trasa li, .pamiatky-zoznam article, .apartman-pas, .druzstva, .treningy, .oslavy-text, .listok, .wellness-fotky figure');
     var io = new IntersectionObserver(function (zaznamy) {
       zaznamy.forEach(function (z) { if (z.isIntersecting) { z.target.classList.add('je-videt'); io.unobserve(z.target); } });
     }, { rootMargin: '0px 0px -8% 0px' });
@@ -56,6 +56,104 @@ document.documentElement.classList.add('js');
       if (el.getBoundingClientRect().top < window.innerHeight) return;
       el.classList.add('odhal'); io.observe(el);
     });
+  }
+
+  // hala: zvýraznenie aktuálnej hodiny (len v sezóne, čas Betliara)
+  var hala = document.getElementById('hala');
+  if (hala && hala.dataset.pasma) {
+    try {
+      var casti = {};
+      new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/Bratislava', weekday: 'short', hour: 'numeric', hourCycle: 'h23', day: 'numeric', month: 'numeric' })
+        .formatToParts(new Date()).forEach(function (c) { casti[c.type] = c.value; });
+      var den = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'].indexOf(casti.weekday);
+      var hod = parseInt(casti.hour, 10), mes = parseInt(casti.month, 10), dd = parseInt(casti.day, 10);
+      var vSezone = (mes > 10 || mes < 4) || (mes === 10 && dd >= 15) || (mes === 4 && dd <= 15);
+      if (vSezone && den > -1 && hod >= +hala.dataset.od && hod < +hala.dataset.do) {
+        JSON.parse(hala.dataset.pasma).forEach(function (p, i) {
+          if (p.dni.indexOf(den) > -1 && p.od <= hod && hod < p.do) {
+            var li = hala.querySelector('[data-pasmo="' + i + '"]');
+            if (li) li.classList.add('je-teraz');
+          }
+        });
+        var bunka = hala.querySelector('.rozpis-slot[data-d="' + den + '"][data-h="' + hod + '"]');
+        if (bunka) bunka.classList.add('je-teraz');
+      }
+    } catch (e) {}
+  }
+
+  // galérie: šípky pre myš
+  var jemny = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  document.querySelectorAll('.turnaje-pas').forEach(function (pas) {
+    if (!jemny) return;
+    var obal = document.createElement('div');
+    obal.className = 'pas-obal';
+    pas.parentNode.insertBefore(obal, pas);
+    obal.appendChild(pas);
+    var spat = document.createElement('button'), dalej = document.createElement('button');
+    spat.type = dalej.type = 'button';
+    spat.className = 'pas-sipka pas-spat'; dalej.className = 'pas-sipka pas-dalej';
+    spat.setAttribute('aria-label', 'Predchádzajúce fotky'); dalej.setAttribute('aria-label', 'Ďalšie fotky');
+    spat.innerHTML = dalej.innerHTML = '<svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+    obal.appendChild(spat); obal.appendChild(dalej);
+    function krok(s) { pas.scrollBy({ left: s * pas.clientWidth * 0.8, behavior: 'smooth' }); }
+    spat.addEventListener('click', function () { krok(-1); });
+    dalej.addEventListener('click', function () { krok(1); });
+    function stav() {
+      var max = pas.scrollWidth - pas.clientWidth - 2;
+      spat.hidden = pas.scrollLeft <= 2;
+      dalej.hidden = pas.scrollLeft >= max;
+    }
+    pas.addEventListener('scroll', stav, { passive: true });
+    window.addEventListener('resize', stav);
+    stav();
+  });
+
+  // galérie: fotka na celú obrazovku
+  var skupiny = document.querySelectorAll('.turnaje-pas, .rest-mriezka, .wellness-fotky, .druzstva-foto, .hala-foto, .dvojica, .ubyt-mriezka');
+  if (skupiny.length && window.HTMLDialogElement) {
+    var lupa = document.createElement('dialog');
+    lupa.className = 'lupa'; lupa.tabIndex = -1;
+    lupa.setAttribute('aria-label', 'Fotka');
+    lupa.innerHTML = '<figure><img alt=""><figcaption></figcaption></figure>' +
+      '<button type="button" class="lupa-zavri" aria-label="Zavrieť"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></button>' +
+      '<button type="button" class="lupa-sipka lupa-spat" aria-label="Predchádzajúca fotka"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>' +
+      '<button type="button" class="lupa-sipka lupa-dalej" aria-label="Ďalšia fotka"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>';
+    document.body.appendChild(lupa);
+    var lImg = lupa.querySelector('img'), lPop = lupa.querySelector('figcaption'), aktualne = [], idx = 0;
+    function zobraz(i) {
+      idx = (i + aktualne.length) % aktualne.length;
+      var o = aktualne[idx];
+      lImg.src = o.getAttribute('src'); lImg.alt = o.alt; lPop.textContent = o.alt;
+      lupa.querySelector('.lupa-spat').hidden = lupa.querySelector('.lupa-dalej').hidden = aktualne.length < 2;
+    }
+    skupiny.forEach(function (sk) {
+      var obr = Array.prototype.slice.call(sk.querySelectorAll('figure img'));
+      obr.forEach(function (o, i) {
+        var f = o.closest('figure');
+        f.classList.add('da-sa-zvacsit');
+        f.tabIndex = 0;
+        f.setAttribute('role', 'button');
+        f.setAttribute('aria-label', 'Zväčšiť fotku: ' + o.alt);
+        function otvor() { aktualne = obr; zobraz(i); lupa.showModal(); lupa.focus(); }
+        f.addEventListener('click', otvor);
+        f.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); otvor(); } });
+      });
+    });
+    lupa.querySelector('.lupa-zavri').addEventListener('click', function () { lupa.close(); });
+    lupa.querySelector('.lupa-spat').addEventListener('click', function () { zobraz(idx - 1); });
+    lupa.querySelector('.lupa-dalej').addEventListener('click', function () { zobraz(idx + 1); });
+    lupa.addEventListener('click', function (e) { if (e.target === lupa) lupa.close(); });
+    lupa.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowRight') zobraz(idx + 1);
+      if (e.key === 'ArrowLeft') zobraz(idx - 1);
+    });
+    var tx = null;
+    lupa.addEventListener('touchstart', function (e) { tx = e.touches[0].clientX; }, { passive: true });
+    lupa.addEventListener('touchend', function (e) {
+      if (tx === null) return;
+      var dx = e.changedTouches[0].clientX - tx; tx = null;
+      if (Math.abs(dx) > 50 && aktualne.length > 1) zobraz(idx + (dx < 0 ? 1 : -1));
+    }, { passive: true });
   }
 
   // formulár: v návrhu ukážkový režim

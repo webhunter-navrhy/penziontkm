@@ -481,3 +481,48 @@ p { margin: 0 0 1em; }
 .kontakt-tel a { display: flex; align-items: center; min-height: 44px; }
 .paticka a { display: inline-flex; align-items: center; min-height: 44px; padding-block: 0; }
 .paticka p { line-height: 1.2; }
+
+
+/* doladenie 10. 11.: teraz v hale, šípky galérií, zväčšenie fotiek */
+.hala-legenda li.je-teraz strong { background: var(--ink); color: var(--zlta); padding: .1rem .45rem; border-radius: 3px; }
+.hala-legenda li.je-teraz span::after { content: " · práve teraz"; font: 600 .78rem var(--font-nadpis); color: var(--antuka-tmava); white-space: nowrap; }
+.rozpis-slot.je-teraz { box-shadow: inset 0 0 0 2px var(--ink); position: relative; z-index: 1; }
+.rozpis-slot.je-teraz::after { content: ""; position: absolute; right: 4px; top: 50%; width: 6px; height: 6px; margin-top: -3px; border-radius: 50%; background: var(--antuka); animation: teraz-pulz 1.8s ease-in-out infinite; }
+@keyframes teraz-pulz { 50% { opacity: .25; } }
+
+.pas-obal { position: relative; }
+.pas-sipka { position: absolute; top: 50%; translate: 0 -50%; z-index: 2; width: 48px; height: 48px; border-radius: 50%; border: 0; background: var(--zlta); color: var(--ink); display: grid; place-items: center; cursor: pointer; box-shadow: 0 10px 24px -12px rgba(0,0,0,.5); opacity: 0; transition: opacity .25s, background .2s; }
+.pas-sipka[hidden] { display: none; }
+.pas-spat { left: .8rem; }
+.pas-spat svg { rotate: 180deg; }
+.pas-dalej { right: .8rem; }
+.pas-obal:hover .pas-sipka, .pas-sipka:focus-visible { opacity: 1; }
+.pas-sipka:hover { background: #E8D23F; }
+
+.da-sa-zvacsit { cursor: zoom-in; overflow: hidden; border-radius: 4px; }
+.da-sa-zvacsit img { transition: scale .6s cubic-bezier(.2,.7,.2,1), filter .3s; }
+@media (hover: hover) { .da-sa-zvacsit:hover img { scale: 1.03; } }
+.da-sa-zvacsit:focus-visible { outline: 3px solid var(--antuka); outline-offset: 3px; }
+
+.lupa { width: 100vw; height: 100dvh; max-width: none; max-height: none; margin: 0; padding: clamp(1rem, 4vw, 3rem); border: 0; background: #141311; color: #fff; outline: 0; }
+.lupa[open] { display: grid; place-items: center; animation: lupa-in .25s ease; }
+.lupa::backdrop { background: transparent; }
+.lupa figure { margin: 0; display: grid; gap: .8rem; justify-items: center; max-width: 100%; }
+.lupa img { max-width: min(100%, 1600px); max-height: calc(100dvh - 7rem); width: auto; height: auto; object-fit: contain; border-radius: 4px; }
+.lupa figcaption { font-size: .95rem; color: rgba(255,255,255,.78); text-align: center; max-width: 40em; }
+.lupa-zavri, .lupa-sipka { position: absolute; width: 48px; height: 48px; border-radius: 50%; border: 0; display: grid; place-items: center; cursor: pointer; }
+.lupa-zavri { top: 1rem; right: 1rem; background: rgba(255,255,255,.12); color: #fff; }
+.lupa-zavri:hover { background: rgba(255,255,255,.22); }
+.lupa-sipka { top: 50%; translate: 0 -50%; background: var(--zlta); color: var(--ink); }
+.lupa-sipka[hidden] { display: none; }
+.lupa-spat { left: 1rem; }
+.lupa-dalej { right: 1rem; }
+@keyframes lupa-in { from { opacity: 0; } }
+@media (max-width: 640px) {
+  .lupa-sipka { top: auto; bottom: 1rem; translate: none; }
+  .lupa img { max-height: calc(100dvh - 10rem); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .rozpis-slot.je-teraz::after, .lupa[open] { animation: none; }
+  .da-sa-zvacsit img { transition: none; }
+}

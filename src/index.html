@@ -181,11 +181,11 @@
       </div>
     </div>
 
-    <div class="hala" id="hala">
+    <div class="hala" id="hala" data-pasma='{{ data.hala.pasma|tojson }}' data-od="{{ data.hala.od }}" data-do="{{ data.hala.do }}">
       <div class="hala-text">
         <h3>Krytá hala</h3>
         <p>Zimná sezóna trvá od 15. októbra do 15. apríla. Cena za hodinu podľa dňa a&nbsp;času:</p>
-        <ul class="hala-legenda" role="list">{% for p in data.hala.pasma %}<li class="{{ p.trieda }}"><span>{{ p.popis }}</span><strong>{{ p.cena }} €</strong></li>{% endfor %}</ul>
+        <ul class="hala-legenda" role="list">{% for p in data.hala.pasma %}<li class="{{ p.trieda }}" data-pasmo="{{ loop.index0 }}"><span>{{ p.popis }}</span><strong>{{ p.cena }} €</strong></li>{% endfor %}</ul>
         <ul class="hala-doplnky" role="list">{% for d in data.hala.doplnky %}<li>{{ d }}</li>{% endfor %}</ul>
       </div>
       <div class="rozpis" aria-hidden="true">
@@ -193,7 +193,7 @@
         {% for d in data.hala.dni %}<div class="rozpis-den">{{ d }}</div>{% endfor %}
         {% for h in range(data.hala.od, data.hala.do) %}
           <div class="rozpis-hod">{{ h }}:00</div>
-          {% for di in range(7) %}{% for p in data.hala.pasma %}{% if di in p.dni and p.od <= h < p.do %}<div class="rozpis-slot {{ p.trieda }}" title="{{ data.hala.dni[di] }} {{ h }}:00 – {{ p.cena }} €">{% if h == p.od and (di == p.dni[0]) %}{{ p.cena }} €{% endif %}</div>{% endif %}{% endfor %}{% endfor %}
+          {% for di in range(7) %}{% for p in data.hala.pasma %}{% if di in p.dni and p.od <= h < p.do %}<div class="rozpis-slot {{ p.trieda }}" data-d="{{ di }}" data-h="{{ h }}" title="{{ data.hala.dni[di] }} {{ h }}:00 – {{ p.cena }} €">{% if h == p.od and (di == p.dni[0]) %}{{ p.cena }} €{% endif %}</div>{% endif %}{% endfor %}{% endfor %}
         {% endfor %}
       </div>
       <figure class="hala-foto">{{ img('2026-hala-deti.jpg', 'Deti na tréningu v krytej tenisovej hale TKM', sizes='(min-width: 64rem) 24rem, 92vw') }}</figure>
