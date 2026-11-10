@@ -145,17 +145,23 @@
     {
       "fakt": "jedálny lístok, pizza, raňajky, nápoje, ponuka na akcie (ceny, gramáže, alergény)",
       "zdroj": "fotky lístka od Rudyho cez WhatsApp 10. 11. 2026 (_research/listok-2026-11-10/)"
+    },
+    {
+      "fakt": "ceny ubytovania 54/36, apartmán 70/90, apartmán 10: 130/170/200, prístelka 18 €",
+      "zdroj": "fotka cenníka UBYTOVANIE od Rudyho 10. 11. 2026 + Rudy „Ubytovanie ešte treba upraviť“"
     }
   ],
   "chybi": [
     "originál loga v súbore (SVG/PDF/PNG vo vysokom rozlíšení) – teraz je prekreslené",
-    "aktuálny cenník (Rudy ho posiela) – ceny sú zo starého webu; apartmán má na starom webe dva rôzne cenníky (120/160/190 vs. 110/150/180)",
     "cena a podmienky privátneho wellnessu",
     "squash – je ešte v prevádzke? (na fotkách 2017, na FB už nie je)",
     "letná sezóna vonkajších kurtov (od kedy do kedy) a permanentky",
     "fotka Rudyho na kurte, jeho celé meno a cena tréningu (blok Tréningy s Rudym)",
     "prístup k doméne penziontkm.sk (Exohosting) na presun webu – MX pošty nechať",
     "fotka Rudyho na kurte (v 119 fotkách nie je jasné, ktorý je on)",
-    "potvrdiť: list PONUKA = lístok na akcie a oslavy? a či prevziať ceny z interného cenníka UBYTOVANIE/POS"
+    "šéftréner: meno, krátky popis, fotka (Rudy pošle)",
+    "fotky jednotlivých družstiev + ku ktorej súťaži patria (Rudy pošle)",
+    "potvrdiť: list PONUKA = lístok na akcie a oslavy?",
+    "ceny športu z interného cenníka (dvorec 8 €, hala 16/13 €, bowling 12 €/h) – prepísať aj tie?"
   ]
 }

@@ -165,20 +165,32 @@
         <p class="supiska-zdroj">Súťaže v&nbsp;sezóne {{ data.druzstva.sezona }} podľa etenis.sk</p>
       </div>
     </div>
+    {% set tf = data.druzstva.sutaze|selectattr("foto")|list %}{% if tf %}
+    <div class="druzstva-galeria">{% for s in tf %}
+      <figure>{{ img(s.foto, "Družstvo TKM – " ~ s.sutaz ~ ", " ~ s.kategoria, sizes="(min-width: 64rem) 22rem, 92vw") }}<figcaption><strong>{{ s.sutaz }}</strong> {{ s.kategoria }}</figcaption></figure>{% endfor %}
+    </div>{% endif %}
 
     <div class="treningy" id="treningy">
       <div class="treningy-hlava">
         <span class="treningy-lopta" aria-hidden="true"></span>
-        <h3>Tenisové tréningy s&nbsp;Rudym</h3>
-      </div>
-      <div class="treningy-text">
-        <p class="uvod">Rudy je poloprofesionálny tenista. Mal na dosah okruh ITF, pribrzdilo ho zranenie – no na kurte maká ďalej a&nbsp;skúsenosti z&nbsp;turnajov odovzdáva na tréningoch.</p>
-        <p>Trénuje sa tu celý rok: v&nbsp;lete na antuke, v&nbsp;zime v&nbsp;krytej hale. Termín a&nbsp;zameranie tréningu si dohodnete priamo s&nbsp;ním.</p>
-        <dl class="ceny">
-          <div><dt>Tréning</dt><dd>20 € / hod. + kurt</dd></div>
-        </dl>
+        <h3>{{ data.treneri.nadpis }}</h3>
+        <p>{{ data.treneri.uvod }}</p>
         <a class="tlacidlo tlacidlo-cierne" href="#kontakt">Dohodnúť tréning</a>
       </div>
+      <ul class="treneri" role="list">
+        {% for t in data.treneri.treneri %}
+        <li class="trener">
+          {% if t.foto %}<figure class="trener-foto">{{ img(t.foto, t.alt or (t.rola ~ " " ~ t.meno), sizes="(min-width: 64rem) 11rem, 30vw") }}</figure>{% else %}<div class="trener-foto trener-foto-chyba"><span class="treningy-lopta" aria-hidden="true"></span><span>fotku doplníme</span></div>{% endif %}
+          <div class="trener-text">
+            <p class="trener-rola">{{ t.rola }}</p>
+            {% if t.meno %}<h4>{{ t.meno }}</h4>{% endif %}
+            {% if t.popis %}<p>{{ t.popis }}</p>{% endif %}
+            {% if t.doplnit %}<p class="trener-doplnit">{{ t.doplnit }}</p>{% endif %}
+            {% if t.ceny %}<dl class="ceny">{% for c in t.ceny %}<div><dt>{{ c[0] }}</dt><dd>{{ c[1] }}</dd></div>{% endfor %}</dl>{% endif %}
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
     </div>
 
     <div class="hala" id="hala" data-pasma='{{ data.hala.pasma|tojson }}' data-od="{{ data.hala.od }}" data-do="{{ data.hala.do }}">

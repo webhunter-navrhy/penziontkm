@@ -4,35 +4,43 @@
   "sutaze": [
     {
       "sutaz": "Extraliga",
-      "kategoria": "muži"
+      "kategoria": "muži",
+      "foto": ""
     },
     {
       "sutaz": "MSR",
-      "kategoria": "staršie žiačky"
+      "kategoria": "staršie žiačky",
+      "foto": ""
     },
     {
       "sutaz": "I. trieda",
-      "kategoria": "muži"
+      "kategoria": "muži",
+      "foto": ""
     },
     {
       "sutaz": "I. trieda",
-      "kategoria": "dorastenci"
+      "kategoria": "dorastenci",
+      "foto": ""
     },
     {
       "sutaz": "I. trieda",
-      "kategoria": "starší žiaci"
+      "kategoria": "starší žiaci",
+      "foto": ""
     },
     {
       "sutaz": "I. trieda",
-      "kategoria": "staršie žiačky"
+      "kategoria": "staršie žiačky",
+      "foto": ""
     },
     {
       "sutaz": "II. trieda",
-      "kategoria": "dorastenky"
+      "kategoria": "dorastenky",
+      "foto": ""
     },
     {
       "sutaz": "Deti do 10 r.",
-      "kategoria": "Davis Cup, Fed Cup, súťaže B a D"
+      "kategoria": "Davis Cup, Fed Cup, súťaže B a D",
+      "foto": ""
     }
   ]
 }

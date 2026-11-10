@@ -48,7 +48,7 @@ document.documentElement.classList.add('js');
 
   // jemné odhalenie pri scrolle
   if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    var ciele = document.querySelectorAll('.sekcia-hlava, .ubyt-mriezka figure, .cennik, .tenis, .hala, .dvojica article, .turnaje figure, .rest-mriezka figure, .trasa li, .pamiatky-zoznam article, .apartman-pas, .druzstva, .treningy, .oslavy-text, .lk, .wellness-fotky figure');
+    var ciele = document.querySelectorAll('.sekcia-hlava, .ubyt-mriezka figure, .cennik, .tenis, .hala, .dvojica article, .turnaje figure, .rest-mriezka figure, .trasa li, .pamiatky-zoznam article, .apartman-pas, .druzstva, .druzstva-galeria figure, .treningy, .trener, .oslavy-text, .lk, .wellness-fotky figure');
     var io = new IntersectionObserver(function (zaznamy) {
       zaznamy.forEach(function (z) { if (z.isIntersecting) { z.target.classList.add('je-videt'); io.unobserve(z.target); } });
     }, { rootMargin: '0px 0px -8% 0px' });
@@ -109,7 +109,7 @@ document.documentElement.classList.add('js');
   });
 
   // galérie: fotka na celú obrazovku
-  var skupiny = document.querySelectorAll('.turnaje-pas, .rest-mriezka, .wellness-fotky, .druzstva-foto, .hala-foto, .dvojica, .ubyt-mriezka');
+  var skupiny = document.querySelectorAll('.turnaje-pas, .rest-mriezka, .wellness-fotky, .druzstva-foto, .druzstva-galeria, .hala-foto, .dvojica, .ubyt-mriezka');
   if (skupiny.length && window.HTMLDialogElement) {
     var lupa = document.createElement('dialog');
     lupa.className = 'lupa'; lupa.tabIndex = -1;

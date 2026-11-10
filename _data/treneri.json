@@ -1,0 +1,30 @@
+{
+  "nadpis": "Tréneri a tréningy",
+  "uvod": "Trénuje sa tu celý rok: v lete na antuke, v zime v krytej hale. Termín a zameranie tréningu si dohodnete priamo s trénerom.",
+  "zdroj": "Rudy cez WhatsApp 9.–10. 11. 2026; šéftréner – údaje a fotky pošle Rudy",
+  "treneri": [
+    {
+      "rola": "Šéftréner klubu",
+      "meno": "",
+      "popis": "",
+      "foto": "",
+      "alt": "",
+      "ceny": [],
+      "doplnit": "Meno, krátky popis a fotku doplníme."
+    },
+    {
+      "rola": "Tréner",
+      "meno": "Rudy",
+      "popis": "Poloprofesionálny tenista. Mal na dosah okruh ITF, pribrzdilo ho zranenie – no na kurte maká ďalej a skúsenosti z turnajov odovzdáva na tréningoch.",
+      "foto": "",
+      "alt": "",
+      "ceny": [
+        [
+          "Tréning",
+          "20 € / hod. + kurt"
+        ]
+      ],
+      "doplnit": ""
+    }
+  ]
+}

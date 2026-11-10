@@ -24,7 +24,7 @@
   },
   "oteviraci_doba": [],
   "sameas": ["https://www.facebook.com/PenzionTKM/", "https://www.instagram.com/penzion_tkm/", "https://www.penziontkm.sk/"],
-  "cenove_rozpeti": "34–190 € / noc",
+  "cenove_rozpeti": "36–200 € / noc",
   "formular": {"endpoint": "", "demo": true, "predmet": "Rezervácia z webu – Penzión TKM"},
   "nav": [
     {"text": "Ubytovanie", "href": "#ubytovanie"},

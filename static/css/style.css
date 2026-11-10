@@ -289,9 +289,6 @@ p { margin: 0 0 1em; }
 .treningy-lopta::before, .treningy-lopta::after { content: ""; position: absolute; width: 100%; height: 100%; border-radius: 50%; border: 1.5px solid var(--ink); top: 0; }
 .treningy-lopta::before { left: -62%; }
 .treningy-lopta::after { left: 62%; }
-.treningy-text .uvod { font-size: clamp(1.15rem, 1.6vw, 1.35rem); color: var(--ink); max-width: 32em; margin-top: 0; }
-.treningy-text p { color: var(--ink-2); max-width: 36em; }
-.treningy-text .ceny { max-width: 26rem; margin-bottom: 1.6rem; }
 
 /* reštaurácia */
 .restauracia { background: #161512; color: var(--papier); }
@@ -579,3 +576,26 @@ p { margin: 0 0 1em; }
   .lk-pata { grid-template-columns: 1fr; }
   .lk-zaver { grid-row: auto; grid-column: auto; }
 }
+
+/* tréneri a fotky družstiev 10. 11. */
+.treningy-hlava p { color: var(--ink-2); max-width: 30em; margin: 0; }
+.treningy-hlava .tlacidlo { margin-top: .4rem; }
+.treneri { list-style: none; margin: 0; padding: 0; display: grid; gap: 1.8rem; }
+.trener { display: grid; grid-template-columns: clamp(6.5rem, 14vw, 11rem) minmax(0, 1fr); gap: clamp(1rem, 2.4vw, 2rem); align-items: start; padding-bottom: 1.8rem; border-bottom: 1px solid var(--ciara); }
+.trener:last-child { border-bottom: 0; padding-bottom: 0; }
+.trener-foto { margin: 0; }
+.trener-foto img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 4px; }
+.trener-foto-chyba { aspect-ratio: 4 / 5; border-radius: 4px; border: 1.5px dashed rgba(17,17,17,.3); background: var(--papier-2); display: grid; place-items: center; align-content: center; gap: .7rem; padding: .5rem; text-align: center; font-size: .78rem; color: var(--ink-2); }
+.trener-foto-chyba .treningy-lopta { width: clamp(2.2rem, 3.4vw, 2.8rem); }
+.trener-rola { margin: 0 0 .25rem; font: 600 .78rem var(--font-nadpis); text-transform: uppercase; letter-spacing: .1em; color: var(--antuka-tmava); }
+.trener h4 { margin: 0 0 .6rem; font-size: clamp(1.4rem, 2.2vw, 1.8rem); line-height: 1.1; letter-spacing: -.02em; }
+.trener-text p { color: var(--ink-2); margin: 0 0 .8rem; max-width: 34em; }
+.trener-text p.trener-rola { color: var(--antuka-tmava); }
+.trener-doplnit { font-style: italic; }
+.trener .ceny { max-width: 22rem; margin: .4rem 0 0; }
+.druzstva-galeria { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 17rem), 1fr)); gap: 1rem; margin-top: 1.6rem; }
+.druzstva-galeria figure { margin: 0; }
+.druzstva-galeria img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 4px; }
+.druzstva-galeria figcaption { margin-top: .5rem; font-size: .92rem; color: var(--ink-2); }
+.druzstva-galeria figcaption strong { font: 600 .92rem var(--font-nadpis); color: var(--ink); margin-right: .3rem; }
+@media (max-width: 640px) { .druzstva-galeria { grid-template-columns: 1fr 1fr; gap: .8rem; } .druzstva-galeria figcaption { font-size: .85rem; } }
