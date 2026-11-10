@@ -141,18 +141,21 @@
     {
       "fakt": "Wellness má krytý bazén s farebným osvetlením, vírivku a saunu",
       "zdroj": "fotky od Rudyho 9. 11. 2026 (bazén odvodený z fotiek – overiť)"
+    },
+    {
+      "fakt": "jedálny lístok, pizza, raňajky, nápoje, ponuka na akcie (ceny, gramáže, alergény)",
+      "zdroj": "fotky lístka od Rudyho cez WhatsApp 10. 11. 2026 (_research/listok-2026-11-10/)"
     }
   ],
   "chybi": [
     "originál loga v súbore (SVG/PDF/PNG vo vysokom rozlíšení) – teraz je prekreslené",
     "aktuálny cenník (Rudy ho posiela) – ceny sú zo starého webu; apartmán má na starom webe dva rôzne cenníky (120/160/190 vs. 110/150/180)",
     "cena a podmienky privátneho wellnessu",
-    "otváracie hodiny reštaurácie/pizzerie, jedálny lístok",
     "squash – je ešte v prevádzke? (na fotkách 2017, na FB už nie je)",
     "letná sezóna vonkajších kurtov (od kedy do kedy) a permanentky",
     "fotka Rudyho na kurte, jeho celé meno a cena tréningu (blok Tréningy s Rudym)",
-    "jedálny lístok a lístok na akcie (položky do _data/listky.json)",
     "prístup k doméne penziontkm.sk (Exohosting) na presun webu – MX pošty nechať",
-    "fotka Rudyho na kurte (v 119 fotkách nie je jasné, ktorý je on)"
+    "fotka Rudyho na kurte (v 119 fotkách nie je jasné, ktorý je on)",
+    "potvrdiť: list PONUKA = lístok na akcie a oslavy? a či prevziať ceny z interného cenníka UBYTOVANIE/POS"
   ]
 }

@@ -310,14 +310,6 @@ p { margin: 0 0 1em; }
 .oslavy-text { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: .5rem 4rem; align-items: end; margin-bottom: 1.8rem; }
 .oslavy-text h3 { margin: 0; font-size: clamp(1.5rem, 2.4vw, 2.1rem); color: var(--papier); }
 .oslavy-text p { margin: 0; color: rgba(250, 248, 241, .8); max-width: 36em; }
-.listky { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: clamp(2.5rem, 5vw, 4rem); }
-.listok { border: 1.5px solid rgba(250, 248, 241, .35); border-radius: 4px; padding: clamp(1.4rem, 3vw, 2.2rem); }
-.listok h3 { margin: 0 0 .7rem; font-size: clamp(1.3rem, 2vw, 1.7rem); color: var(--zlta); }
-.listok p { margin: 0; color: rgba(250, 248, 241, .8); max-width: 34em; }
-.listok-polozky { list-style: none; margin: 0; padding: 0; }
-.listok-polozky li { display: flex; justify-content: space-between; gap: 1rem; padding: .6rem 0; border-bottom: 1px solid rgba(250, 248, 241, .18); }
-.listok-polozky small { display: block; color: rgba(250, 248, 241, .65); font-size: .85rem; }
-.listok-polozky strong { font-family: var(--font-nadpis); font-weight: 600; white-space: nowrap; }
 
 /* wellness */
 .wellness { background: var(--zlta); }
@@ -447,7 +439,6 @@ p { margin: 0 0 1em; }
   body { font-size: 1rem; }
   .hala { grid-template-columns: 1fr; }
   .dvojica { grid-template-columns: 1fr; }
-  .listky { grid-template-columns: 1fr; }
   .wellness-fotky { grid-template-columns: 1fr 1fr; }
   .wf-a { grid-column: 1 / -1; }
   .wellness-fotky img { height: auto; aspect-ratio: 4 / 3; }
@@ -525,4 +516,66 @@ p { margin: 0 0 1em; }
 @media (prefers-reduced-motion: reduce) {
   .rozpis-slot.je-teraz::after, .lupa[open] { animation: none; }
   .da-sa-zvacsit img { transition: none; }
+}
+
+/* jedálny lístok 10. 11. – papierový lístok so záložkami */
+.rest-odkazy { display: flex; flex-wrap: wrap; gap: .2rem 1.6rem; margin: 0; }
+.odkaz-text { color: inherit; text-decoration: underline; text-decoration-color: var(--zlta); text-decoration-thickness: 2px; text-underline-offset: .22em; }
+.lk { margin-top: clamp(3.5rem, 7vw, 6rem); scroll-margin-top: calc(var(--hlavicka) + 1rem); }
+.lk-hlava { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: .5rem 4rem; align-items: end; margin-bottom: 1.8rem; }
+.lk-hlava h3 { margin: 0; font-size: clamp(1.5rem, 2.4vw, 2.1rem); color: var(--papier); }
+.lk-hlava p { margin: 0; color: rgba(250, 248, 241, .8); max-width: 36em; }
+.lk-zalozky { display: flex; gap: .35rem; overflow-x: auto; scrollbar-width: none; padding: 0 clamp(.6rem, 2vw, 1.4rem); }
+.lk-zalozky::-webkit-scrollbar { display: none; }
+.lk-zalozky[hidden] { display: none; }
+.lk-zalozky button { flex: none; font: 600 .95rem/1 var(--font-nadpis); color: var(--papier); background: transparent; border: 1.5px solid rgba(250, 248, 241, .3); border-bottom: 0; border-radius: 8px 8px 0 0; padding: .95rem 1.25rem .85rem; min-height: 44px; cursor: pointer; transition: background .2s, color .2s; }
+.lk-zalozky button:hover { background: rgba(250, 248, 241, .1); }
+.lk-zalozky button[aria-selected="true"] { background: var(--papier); color: var(--ink); border-color: var(--papier); box-shadow: inset 0 4px 0 var(--zlta); }
+.lk-zalozky button:focus-visible { outline: 3px solid var(--zlta); outline-offset: -3px; }
+.lk-papier { background: var(--papier); color: var(--ink); border-radius: 6px; padding: clamp(1.5rem, 4vw, 3.4rem); box-shadow: 0 30px 60px -40px rgba(0, 0, 0, .8); }
+.lk-taby .lk-papier { border-top-left-radius: 0; }
+.lk-panel[hidden] { display: none; }
+.lk-panel + .lk-panel { margin-top: 3rem; }
+.lk-taby .lk-panel + .lk-panel { margin-top: 0; }
+.lk-panel-nazov { font-size: clamp(1.4rem, 2.2vw, 1.8rem); margin: 0 0 1.4rem; }
+.lk-taby .lk-panel-nazov { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.lk-panel-uvod { color: var(--ink-2); max-width: 40em; margin: 0 0 2rem; }
+.lk-stlpce { columns: 2 20rem; column-gap: clamp(2rem, 5vw, 4.5rem); }
+.lk-sekcia + .lk-sekcia { margin-top: 2.4rem; }
+.lk-stlpce + * , .lk-panel .lk-stlpce { margin-bottom: 2.2rem; }
+.lk-sekcia h5 { font: 700 .8rem/1.3 var(--font-nadpis); letter-spacing: .1em; text-transform: uppercase; color: var(--antuka-tmava); margin: 0 0 .7rem; padding-bottom: .55rem; border-bottom: 1.5px solid var(--ink); break-after: avoid; -webkit-column-break-after: avoid; }
+.lk-sekcia h5 span { font: 400 .85rem var(--font-text); letter-spacing: 0; text-transform: none; color: var(--ink-2); margin-left: .35rem; }
+.lk-polozky { list-style: none; margin: 0; padding: 0; }
+.lk-polozka { padding: .55rem 0 .6rem; break-inside: avoid; -webkit-column-break-inside: avoid; }
+.lk-skupina { font: 600 .74rem/1 var(--font-nadpis); letter-spacing: .08em; text-transform: uppercase; color: var(--ink-2); padding: 1rem 0 .2rem; break-after: avoid; -webkit-column-break-after: avoid; }
+.lk-skupina:first-child { padding-top: .3rem; }
+.lk-riadok { display: flex; align-items: baseline; gap: .5rem; }
+.lk-nazov { font: 600 1rem/1.35 var(--font-nadpis); letter-spacing: -.005em; }
+.lk-nazov em { font: italic 400 .92rem var(--font-text); color: var(--antuka-tmava); margin-left: .2rem; letter-spacing: 0; }
+.lk-bodky { flex: 1 1 1.5rem; min-width: 1.5rem; border-bottom: 2px dotted rgba(17, 17, 17, .28); translate: 0 -.3em; }
+.lk-cena { flex: none; font: 600 1rem/1.35 var(--font-nadpis); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.lk-popis { margin: .15rem 0 0; font-size: .9rem; line-height: 1.45; color: var(--ink-2); max-width: 34em; }
+.lk-meta { display: inline-flex; gap: .55rem; margin-left: .25rem; font-size: .78rem; color: #6E685E; white-space: nowrap; }
+.lk-meta span + abbr::before { content: "·"; margin-right: .55rem; }
+.lk-meta abbr { text-decoration: none; cursor: help; }
+.lk-stitky { list-style: none; margin: .2rem 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: .45rem; }
+.lk-stitky li { font-size: .88rem; padding: .3rem .75rem; border-radius: 999px; background: var(--zlta-2); }
+.lk-pata { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 1rem 3rem; align-items: start; margin-top: .6rem; padding-top: 1.4rem; border-top: 1px solid var(--ciara); font-size: .88rem; color: var(--ink-2); }
+.lk-pata ul { list-style: none; margin: 0; padding: 0; }
+.lk-alergeny summary { cursor: pointer; font: 600 .88rem var(--font-nadpis); color: var(--ink); min-height: 40px; display: flex; align-items: center; gap: .5rem; list-style: none; }
+.lk-alergeny summary::-webkit-details-marker { display: none; }
+.lk-alergeny summary::before { content: "+"; display: grid; place-items: center; width: 22px; height: 22px; border-radius: 50%; background: var(--zlta); font-size: 1rem; line-height: 1; }
+.lk-alergeny[open] summary::before { content: "–"; }
+.lk-alergeny ol { margin: .4rem 0 0; padding-left: 1.6rem; columns: 2 16rem; column-gap: 2rem; }
+.lk-alergeny li { margin-bottom: .25rem; break-inside: avoid; }
+.lk-alergeny { grid-column: 1 / -1; }
+.lk-zaver { grid-row: 1; grid-column: 2; margin: 0; font: 600 1.05rem var(--font-nadpis); color: var(--ink); }
+@media (max-width: 960px) { .lk-hlava { grid-template-columns: 1fr; } }
+@media (max-width: 640px) {
+  .lk-zalozky { padding: 0; margin-inline: calc(-1 * var(--okraj, 1rem)); padding-inline: var(--okraj, 1rem); }
+  .lk-zalozky button { padding: .85rem 1rem .75rem; font-size: .9rem; }
+  .lk-papier { padding: 1.4rem 1.1rem 1.6rem; }
+  .lk-taby .lk-papier { border-top-right-radius: 0; }
+  .lk-pata { grid-template-columns: 1fr; }
+  .lk-zaver { grid-row: auto; grid-column: auto; }
 }

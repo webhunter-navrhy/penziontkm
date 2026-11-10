@@ -1,16 +1,1587 @@
 {
+  "nadpis": "Jedálny lístok",
+  "uvod": "Varíme z čerstvých surovín, pizzu pečieme na objednávku. Pizze nesú mená tenisových kategórií – od HTO až po VN 100.",
   "listky": [
     {
-      "id": "listok",
-      "nazov": "Jedálny lístok",
-      "popis": "Pizza, jedlá z kuchyne a nápoje z baru. Lístok sem čoskoro doplníme – dovtedy sa na jedlo pýtajte na recepcii alebo telefonicky.",
-      "polozky": []
+      "id": "jedla",
+      "nazov": "Jedlá",
+      "sekcie": [
+        {
+          "nazov": "Polievky",
+          "polozky": [
+            {
+              "nazov": "Halászlé",
+              "popis": "rybacia polievka… mňam – treska tmavá sviečková, kyslá smotana, chlieb",
+              "mnozstvo": "0,35 l",
+              "cena": "6,40 €",
+              "alergeny": "4, 7",
+              "podnazov": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Paradajková",
+              "popis": "s cestovinami alebo syrom",
+              "mnozstvo": "0,35 l",
+              "cena": "3,70 €",
+              "alergeny": "1, 7",
+              "podnazov": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Zeleninová s haluškami",
+              "mnozstvo": "0,35 l",
+              "cena": "3,90 €",
+              "alergeny": "1, 7",
+              "podnazov": "",
+              "popis": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Hokaidó",
+              "mnozstvo": "0,35 l",
+              "cena": "3,70 €",
+              "alergeny": "1, 7",
+              "podnazov": "",
+              "popis": "",
+              "skupina": ""
+            }
+          ],
+          "poznamka": "",
+          "stitky": []
+        },
+        {
+          "nazov": "Mäsité a bezmäsité jedlá",
+          "polozky": [
+            {
+              "nazov": "Kuracie prsia na prírodno",
+              "popis": "kuracie prsia, syr, maslo, zeleninová obloha",
+              "mnozstvo": "230 g",
+              "cena": "7,60 €",
+              "alergeny": "7",
+              "podnazov": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Kurací závitok",
+              "podnazov": "špecialita šéfkuchára",
+              "popis": "kuracie stehná, prosciutto, syr, šunka, šampiňónová omáčka, zeleninová obloha",
+              "mnozstvo": "350 g",
+              "cena": "8,90 €",
+              "alergeny": "1, 3, 7",
+              "skupina": ""
+            },
+            {
+              "nazov": "Vyprážaný kurací / bravčový rezeň",
+              "popis": "kuracie prsia / karé, zeleninová obloha",
+              "mnozstvo": "260 g",
+              "cena": "8,10 €",
+              "alergeny": "1, 3, 7",
+              "podnazov": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Šťavnaté kuracie nugetky",
+              "popis": "kuracie prsia, solamil, maslo, zeleninová obloha",
+              "mnozstvo": "220 g",
+              "cena": "7,60 €",
+              "alergeny": "7",
+              "podnazov": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Kuracie plátky na šampiňónovo-nivovej omáčke",
+              "popis": "kuracie prsia, smotana, šampiňóny, niva, zeleninová obloha",
+              "mnozstvo": "300 g",
+              "cena": "7,90 €",
+              "alergeny": "7",
+              "podnazov": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Cordon bleu",
+              "popis": "kuracie prsia, syr, šunka, zeleninová obloha",
+              "mnozstvo": "300 g",
+              "cena": "8,90 €",
+              "alergeny": "1, 3, 7",
+              "podnazov": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Maďarský guláš",
+              "popis": "bravčové mäso, cibuľa",
+              "mnozstvo": "300 g",
+              "cena": "7,60 €",
+              "alergeny": "1, 7",
+              "podnazov": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Filet z tmavej tresky na masle",
+              "popis": "treska tmavá sviečková, maslo, zeleninová obloha",
+              "mnozstvo": "200 g",
+              "cena": "9,90 €",
+              "alergeny": "4, 7",
+              "podnazov": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Gemerské pirohy",
+              "popis": "zemiakovo-bryndzové pirohy, opečená slanina, opečená cibuľa, kyslá smotana",
+              "mnozstvo": "280 g",
+              "cena": "7,80 €",
+              "alergeny": "1, 3, 7",
+              "podnazov": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Vyprážaný syr",
+              "popis": "syr, zeleninová obloha",
+              "mnozstvo": "180 g",
+              "cena": "7,40 €",
+              "alergeny": "1, 3, 7",
+              "podnazov": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Grilovaný hermelín",
+              "popis": "hermelín, brusnice, zeleninová obloha",
+              "mnozstvo": "150 g",
+              "cena": "7,00 €",
+              "alergeny": "7",
+              "podnazov": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Vyprážaná parenica",
+              "popis": "parenica údená, šunka, brusnice, zeleninová obloha",
+              "mnozstvo": "180 g",
+              "cena": "7,90 €",
+              "alergeny": "1, 3, 7",
+              "podnazov": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Penne s kuracím mäsom",
+              "popis": "cestoviny penne, kuracie prsia, zeleninovo-smotanová omáčka, syr",
+              "mnozstvo": "540 g",
+              "cena": "8,40 €",
+              "alergeny": "1, 7",
+              "podnazov": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Penne s brokolicou",
+              "popis": "cestoviny penne, brokolica, smotanovo-syrová omáčka, syr",
+              "mnozstvo": "490 g",
+              "cena": "7,30 €",
+              "alergeny": "1, 7",
+              "podnazov": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Domáce halušky",
+              "popis": "halušky zo zemiakového cesta, bryndzovo-smotanovo-syrová omáčka, opečená slanina",
+              "mnozstvo": "450 g",
+              "cena": "8,10 €",
+              "alergeny": "1, 3, 7",
+              "podnazov": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Rizoto zeleninové s kuracím mäsom",
+              "popis": "zelenina, kuracie prsia, syr, maslo, kyslá uhorka",
+              "mnozstvo": "450 g",
+              "cena": "8,90 €",
+              "alergeny": "7",
+              "podnazov": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Rizoto zeleninové",
+              "popis": "zelenina, syr, maslo, kyslá uhorka",
+              "mnozstvo": "400 g",
+              "cena": "7,50 €",
+              "alergeny": "7",
+              "podnazov": "",
+              "skupina": ""
+            }
+          ],
+          "poznamka": "",
+          "stitky": []
+        },
+        {
+          "nazov": "Šaláty",
+          "polozky": [
+            {
+              "nazov": "Miešaný",
+              "popis": "paprika, paradajka, uhorka, cibuľa, kukurica, ľadový šalát, nálev",
+              "mnozstvo": "300 g",
+              "cena": "6,40 €",
+              "podnazov": "",
+              "alergeny": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Šopský",
+              "popis": "paprika, paradajka, uhorka, cibuľa, kukurica, balkánsky syr, ľadový šalát, nálev",
+              "mnozstvo": "300 g",
+              "cena": "7,40 €",
+              "alergeny": "7",
+              "podnazov": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Tuniakový",
+              "popis": "paprika, paradajka, uhorka, tuniak, kukurica, cibuľa, ľadový šalát, nálev",
+              "mnozstvo": "300 g",
+              "cena": "8,20 €",
+              "alergeny": "4",
+              "podnazov": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Kurací",
+              "popis": "paprika, paradajka, uhorka, cibuľa, kukurica, kuracie mäso, syr, ľadový šalát, nálev",
+              "mnozstvo": "300 g",
+              "cena": "8,20 €",
+              "alergeny": "7",
+              "podnazov": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Šalátová krabica",
+              "mnozstvo": "0,5 l / 1 l",
+              "cena": "0,30 / 0,50 €",
+              "podnazov": "",
+              "popis": "",
+              "alergeny": "",
+              "skupina": ""
+            }
+          ],
+          "poznamka": "",
+          "stitky": []
+        },
+        {
+          "nazov": "Prílohy",
+          "polozky": [
+            {
+              "nazov": "Hranolky",
+              "mnozstvo": "200 g",
+              "cena": "2,50 €",
+              "podnazov": "",
+              "popis": "",
+              "alergeny": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Opekané alebo varené zemiaky",
+              "mnozstvo": "200 g",
+              "cena": "2,50 €",
+              "podnazov": "",
+              "popis": "",
+              "alergeny": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Ryža, knedľa",
+              "mnozstvo": "200 g",
+              "cena": "2,50 €",
+              "alergeny": "1, 3, 7",
+              "podnazov": "",
+              "popis": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Pizzové cestíčko, pizzové tyčinky",
+              "mnozstvo": "200 g",
+              "cena": "3,90 €",
+              "alergeny": "1",
+              "podnazov": "",
+              "popis": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Tatárska omáčka",
+              "mnozstvo": "50 g",
+              "cena": "1,50 €",
+              "alergeny": "3, 7",
+              "podnazov": "",
+              "popis": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Kečup",
+              "mnozstvo": "50 g",
+              "cena": "1,50 €",
+              "podnazov": "",
+              "popis": "",
+              "alergeny": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Dipp",
+              "popis": "tatárska omáčka, cesnak, chilli",
+              "mnozstvo": "50 g",
+              "cena": "2,70 €",
+              "alergeny": "3, 7",
+              "podnazov": "",
+              "skupina": ""
+            }
+          ],
+          "poznamka": "",
+          "stitky": []
+        },
+        {
+          "nazov": "Sladké jedlá",
+          "polozky": [
+            {
+              "nazov": "Palacinky 2 ks",
+              "popis": "lekvár, ovocie a zmrzlina podľa ponuky, šľahačka, čokoládový topping",
+              "mnozstvo": "400 g",
+              "cena": "7,20 €",
+              "alergeny": "1, 3, 7",
+              "podnazov": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Palacinkový trhanec",
+              "popis": "s karamelizovano-flambovaným jabĺčkom, šľahačka, práškový cukor, flambovaný um, maslo",
+              "mnozstvo": "400 g",
+              "cena": "7,20 €",
+              "alergeny": "1, 3, 7",
+              "podnazov": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Zmrzlinový pohár",
+              "popis": "zmrzlina podľa ponuky, šľahačka, čokoládový topping, trubička",
+              "mnozstvo": "200 g",
+              "cena": "6,30 €",
+              "alergeny": "1, 3, 7",
+              "podnazov": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Knedličky 6 ks",
+              "popis": "zemiakovo-tvarohové plnené jahodovou plnkou, maslo, opečená strúhanka, čokoládový topping",
+              "mnozstvo": "200 g",
+              "cena": "7,10 €",
+              "alergeny": "1, 3, 7",
+              "podnazov": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Tradičná parená buchta",
+              "popis": "plnená lekvárom, vanilkový puding, varené lesné ovocie, maslo, granko alebo mak",
+              "mnozstvo": "400 g",
+              "cena": "7,20 €",
+              "alergeny": "1, 3, 7",
+              "podnazov": "",
+              "skupina": ""
+            }
+          ],
+          "poznamka": "",
+          "stitky": []
+        }
+      ],
+      "uvod": ""
+    },
+    {
+      "id": "pizza",
+      "nazov": "Pizza",
+      "sekcie": [
+        {
+          "nazov": "Pizza",
+          "poznamka": "na objednávku",
+          "polozky": [
+            {
+              "nazov": "HTO",
+              "podnazov": "hľadáme talentovaných olympionikov",
+              "popis": "paradajkový základ, dva druhy syra",
+              "mnozstvo": "360 g",
+              "cena": "6,90 €",
+              "alergeny": "1, 7",
+              "skupina": ""
+            },
+            {
+              "nazov": "MLŽY",
+              "podnazov": "mladšie žiačky",
+              "popis": "paradajkový základ, šunka, kukurica (alebo ananás), syr",
+              "mnozstvo": "410 g",
+              "cena": "7,40 €",
+              "alergeny": "1, 7",
+              "skupina": ""
+            },
+            {
+              "nazov": "MLŽI",
+              "podnazov": "mladší žiaci",
+              "popis": "paradajkový základ, šunka, kukurica, šampiňóny, syr",
+              "mnozstvo": "430 g",
+              "cena": "7,70 €",
+              "alergeny": "1, 7",
+              "skupina": ""
+            },
+            {
+              "nazov": "STŽY",
+              "podnazov": "staršie žiačky",
+              "popis": "paradajkový základ, štyri druhy syra, cesnak",
+              "mnozstvo": "430 g",
+              "cena": "7,90 €",
+              "alergeny": "1, 7",
+              "skupina": ""
+            },
+            {
+              "nazov": "STŽI",
+              "podnazov": "starší žiaci",
+              "popis": "paradajkový základ, slanina, klobása, cibuľa, syr",
+              "mnozstvo": "440 g",
+              "cena": "7,70 €",
+              "alergeny": "1, 7",
+              "skupina": ""
+            },
+            {
+              "nazov": "DORKY",
+              "podnazov": "dorastenky",
+              "popis": "paradajkový základ, prosciutto, olivy, syr",
+              "mnozstvo": "450 g",
+              "cena": "7,90 €",
+              "alergeny": "1, 7",
+              "skupina": ""
+            },
+            {
+              "nazov": "DORCI",
+              "podnazov": "dorastenci",
+              "popis": "paradajkový základ, mozzarella, bazalka, olivový olej",
+              "mnozstvo": "430 g",
+              "cena": "7,70 €",
+              "alergeny": "1, 7",
+              "skupina": ""
+            },
+            {
+              "nazov": "ŽENY",
+              "popis": "paradajkový základ, šunka, saláma, klobása, cibuľa, bryndza, cesnak, syr",
+              "mnozstvo": "440 g",
+              "cena": "7,90 €",
+              "alergeny": "1, 7",
+              "podnazov": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "MUŽI",
+              "popis": "paradajkový základ, šunka, saláma, klobása, cibuľa, slanina, paprika, paradajka, syr",
+              "mnozstvo": "480 g",
+              "cena": "7,90 €",
+              "alergeny": "1, 7",
+              "podnazov": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "VN 100",
+              "podnazov": "všetci nad 100 kg",
+              "popis": "paradajkový základ, šunka, paradajka, paprika, kukurica, cibuľa, šampiňóny, syr",
+              "mnozstvo": "420 g",
+              "cena": "7,70 €",
+              "alergeny": "1, 7",
+              "skupina": ""
+            },
+            {
+              "nazov": "Pizza podľa vlastného výberu",
+              "popis": "základ + prílohy na pizzu podľa chuti",
+              "cena": "od 6,90 €",
+              "podnazov": "",
+              "mnozstvo": "",
+              "alergeny": "",
+              "skupina": ""
+            }
+          ],
+          "stitky": []
+        },
+        {
+          "nazov": "Prílohy na pizzu",
+          "polozky": [
+            {
+              "nazov": "Kukurica, brokolica, ananás, syr, vajce, šunka, saláma, slanina, klobása, šampiňóny, paprika, paradajka, cibuľa, cesnak, olivy, kapary, baranie rohy",
+              "mnozstvo": "50 g",
+              "cena": "1,20 €",
+              "alergeny": "3, 7",
+              "podnazov": "",
+              "popis": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Prosciutto, bryndza, niva, chilli",
+              "mnozstvo": "50 g",
+              "cena": "2,30 €",
+              "alergeny": "7",
+              "podnazov": "",
+              "popis": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Tuniak",
+              "mnozstvo": "100 g",
+              "cena": "2,30 €",
+              "alergeny": "4",
+              "podnazov": "",
+              "popis": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Kuracie prsia",
+              "mnozstvo": "100 g",
+              "cena": "2,70 €",
+              "podnazov": "",
+              "popis": "",
+              "alergeny": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Krabica na pizzu",
+              "cena": "0,50 €",
+              "podnazov": "",
+              "popis": "",
+              "mnozstvo": "",
+              "alergeny": "",
+              "skupina": ""
+            }
+          ],
+          "poznamka": "",
+          "stitky": []
+        }
+      ],
+      "uvod": ""
+    },
+    {
+      "id": "ranajky",
+      "nazov": "Raňajky",
+      "sekcie": [
+        {
+          "nazov": "Raňajky na objednávku",
+          "poznamka": "6:30 – 8:30",
+          "polozky": [
+            {
+              "nazov": "Spišské párky",
+              "popis": "s horčicou 3 ks, zeleninová obloha",
+              "cena": "5,50 €",
+              "podnazov": "",
+              "mnozstvo": "",
+              "alergeny": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Ham & eggs",
+              "popis": "šunka, saláma, slanina, klobása, šampiňóny, cibuľa s vajcom 3 ks, zeleninová obloha",
+              "cena": "6,30 €",
+              "podnazov": "",
+              "mnozstvo": "",
+              "alergeny": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Miešané vajíčka",
+              "popis": "3 ks so slaninou, cibuľou, maslo, zeleninová obloha",
+              "cena": "5,50 €",
+              "podnazov": "",
+              "mnozstvo": "",
+              "alergeny": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Omeleta z vajíčok",
+              "popis": "3 ks – syr, šunka, cibuľa, paprika, paradajka, zeleninová obloha",
+              "cena": "5,80 €",
+              "podnazov": "",
+              "mnozstvo": "",
+              "alergeny": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Volské oko",
+              "popis": "3 ks, maslo, zeleninová obloha",
+              "cena": "5,10 €",
+              "podnazov": "",
+              "mnozstvo": "",
+              "alergeny": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Suchá misa",
+              "popis": "šunka, saláma, klobása, majonézový šalát, syr, maslo, zeleninová obloha",
+              "cena": "6,30 €",
+              "podnazov": "",
+              "mnozstvo": "",
+              "alergeny": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Sladká misa",
+              "popis": "maslo, džem, koláč, jogurt",
+              "cena": "5,80 €",
+              "podnazov": "",
+              "mnozstvo": "",
+              "alergeny": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Chlieb vo vajíčku",
+              "popis": "chlieb 2 ks, rožok 1 ks vo vajíčku, zeleninová obloha",
+              "cena": "5,80 €",
+              "podnazov": "",
+              "mnozstvo": "",
+              "alergeny": "",
+              "skupina": ""
+            }
+          ],
+          "stitky": []
+        }
+      ],
+      "uvod": ""
+    },
+    {
+      "id": "napoje",
+      "nazov": "Nápoje",
+      "sekcie": [
+        {
+          "nazov": "Káva a teplé nápoje",
+          "polozky": [
+            {
+              "nazov": "Espresso",
+              "mnozstvo": "7,5 g",
+              "cena": "2,50 €",
+              "podnazov": "",
+              "popis": "",
+              "alergeny": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Turecká káva",
+              "mnozstvo": "7,5 g",
+              "cena": "2,50 €",
+              "podnazov": "",
+              "popis": "",
+              "alergeny": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Viedenská káva",
+              "mnozstvo": "7,5 g",
+              "cena": "3,00 €",
+              "podnazov": "",
+              "popis": "",
+              "alergeny": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Nesca classic",
+              "popis": "aj bez kofeínu",
+              "mnozstvo": "7,5 g",
+              "cena": "2,50 €",
+              "podnazov": "",
+              "alergeny": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Cappuccino",
+              "mnozstvo": "7,5 g",
+              "cena": "3,00 €",
+              "podnazov": "",
+              "popis": "",
+              "alergeny": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Latte macchiato",
+              "mnozstvo": "7,5 g",
+              "cena": "3,20 €",
+              "podnazov": "",
+              "popis": "",
+              "alergeny": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Ľadová káva",
+              "mnozstvo": "7,5 g",
+              "cena": "3,80 €",
+              "podnazov": "",
+              "popis": "",
+              "alergeny": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Smotana do kávy",
+              "mnozstvo": "10 g",
+              "cena": "0,30 €",
+              "podnazov": "",
+              "popis": "",
+              "alergeny": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Med",
+              "mnozstvo": "20 g",
+              "cena": "0,50 €",
+              "podnazov": "",
+              "popis": "",
+              "alergeny": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Čaj",
+              "popis": "mix, cukor, citrón",
+              "mnozstvo": "1,5 g",
+              "cena": "2,50 €",
+              "podnazov": "",
+              "alergeny": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Čokoláda so šľahačkou",
+              "mnozstvo": "40 g",
+              "cena": "3,80 €",
+              "podnazov": "",
+              "popis": "",
+              "alergeny": "",
+              "skupina": ""
+            }
+          ],
+          "poznamka": "",
+          "stitky": []
+        },
+        {
+          "nazov": "Nealkoholické nápoje",
+          "polozky": [
+            {
+              "nazov": "Kofola čapovaná",
+              "mnozstvo": "0,1 l",
+              "cena": "0,50 €",
+              "podnazov": "",
+              "popis": "",
+              "alergeny": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Cappy",
+              "popis": "viac druhov",
+              "mnozstvo": "0,25 l",
+              "cena": "2,60 €",
+              "podnazov": "",
+              "alergeny": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Vinea",
+              "popis": "biela, červená",
+              "mnozstvo": "0,25 l",
+              "cena": "2,20 €",
+              "podnazov": "",
+              "alergeny": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Tonic",
+              "mnozstvo": "0,25 l",
+              "cena": "2,60 €",
+              "podnazov": "",
+              "popis": "",
+              "alergeny": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Coca-Cola, Sprite, Fanta",
+              "mnozstvo": "0,33 l",
+              "cena": "2,60 €",
+              "podnazov": "",
+              "popis": "",
+              "alergeny": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Fuzetea",
+              "popis": "jahoda, broskyňa – plastová fľaša",
+              "mnozstvo": "0,5 l",
+              "cena": "2,75 €",
+              "podnazov": "",
+              "alergeny": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "ISO FRUIT",
+              "popis": "plechovka",
+              "mnozstvo": "0,5 l",
+              "cena": "2,65 €",
+              "podnazov": "",
+              "alergeny": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Limonáda",
+              "popis": "mix",
+              "mnozstvo": "0,5 l",
+              "cena": "3,90 €",
+              "podnazov": "",
+              "alergeny": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Džbán vody s citrónom",
+              "mnozstvo": "1 l",
+              "cena": "4,80 €",
+              "podnazov": "",
+              "popis": "",
+              "alergeny": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Džbán vody s citrónom a pomarančom",
+              "mnozstvo": "1 l",
+              "cena": "5,80 €",
+              "podnazov": "",
+              "popis": "",
+              "alergeny": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Rajec",
+              "popis": "sýtený, jemne sýtený, nesýtený",
+              "mnozstvo": "0,33 l",
+              "cena": "1,80 €",
+              "podnazov": "",
+              "alergeny": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Rajec",
+              "popis": "nesýtený, jemne sýtený – plastová fľaša",
+              "mnozstvo": "0,75 l",
+              "cena": "2,35 €",
+              "podnazov": "",
+              "alergeny": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Römerquelle",
+              "popis": "citrónová tráva",
+              "mnozstvo": "0,33 l",
+              "cena": "2,10 €",
+              "podnazov": "",
+              "alergeny": "",
+              "skupina": ""
+            }
+          ],
+          "poznamka": "",
+          "stitky": []
+        },
+        {
+          "nazov": "Pivo",
+          "polozky": [
+            {
+              "nazov": "Krušovice 10°",
+              "mnozstvo": "0,5 / 0,3 l",
+              "cena": "2,50 / 2,10 €",
+              "skupina": "Čapované",
+              "podnazov": "",
+              "popis": "",
+              "alergeny": ""
+            },
+            {
+              "nazov": "Zlatý Bažant Radler nealko",
+              "popis": "letná sezóna",
+              "mnozstvo": "0,5 / 0,3 l",
+              "cena": "2,50 / 2,10 €",
+              "skupina": "Čapované",
+              "podnazov": "",
+              "alergeny": ""
+            },
+            {
+              "nazov": "Tmavé Maurus",
+              "popis": "letná sezóna",
+              "mnozstvo": "0,5 / 0,3 l",
+              "cena": "2,90 / 2,50 €",
+              "skupina": "Čapované",
+              "podnazov": "",
+              "alergeny": ""
+            },
+            {
+              "nazov": "Rezané",
+              "popis": "letná sezóna",
+              "mnozstvo": "0,5 / 0,3 l",
+              "cena": "2,90 / 2,50 €",
+              "skupina": "Čapované",
+              "podnazov": "",
+              "alergeny": ""
+            },
+            {
+              "nazov": "Heineken 12°",
+              "mnozstvo": "0,5 l",
+              "cena": "2,60 €",
+              "skupina": "Fľaškové podľa ponuky",
+              "podnazov": "",
+              "popis": "",
+              "alergeny": ""
+            },
+            {
+              "nazov": "Pilsner Urquell 12°",
+              "mnozstvo": "0,5 l",
+              "cena": "2,70 €",
+              "skupina": "Fľaškové podľa ponuky",
+              "podnazov": "",
+              "popis": "",
+              "alergeny": ""
+            },
+            {
+              "nazov": "Zlatý Bažant 12°",
+              "mnozstvo": "0,5 l",
+              "cena": "2,30 €",
+              "skupina": "Fľaškové podľa ponuky",
+              "podnazov": "",
+              "popis": "",
+              "alergeny": ""
+            },
+            {
+              "nazov": "Zlatý Bažant 10°",
+              "mnozstvo": "0,5 l",
+              "cena": "2,10 €",
+              "skupina": "Fľaškové podľa ponuky",
+              "podnazov": "",
+              "popis": "",
+              "alergeny": ""
+            },
+            {
+              "nazov": "Budvar tmavý",
+              "mnozstvo": "0,5 l",
+              "cena": "2,30 €",
+              "skupina": "Fľaškové podľa ponuky",
+              "podnazov": "",
+              "popis": "",
+              "alergeny": ""
+            },
+            {
+              "nazov": "Zlatý Bažant nealko",
+              "mnozstvo": "0,5 l",
+              "cena": "2,00 €",
+              "skupina": "Nealkoholické",
+              "podnazov": "",
+              "popis": "",
+              "alergeny": ""
+            },
+            {
+              "nazov": "Budvar nealko",
+              "mnozstvo": "0,5 l",
+              "cena": "2,00 €",
+              "skupina": "Nealkoholické",
+              "podnazov": "",
+              "popis": "",
+              "alergeny": ""
+            }
+          ],
+          "poznamka": "",
+          "stitky": []
+        },
+        {
+          "nazov": "Víno",
+          "polozky": [
+            {
+              "nazov": "Veltlínske zelené",
+              "popis": "biele suché",
+              "mnozstvo": "0,1 l",
+              "cena": "1,80 €",
+              "podnazov": "",
+              "alergeny": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Tramín červený",
+              "popis": "biele suché",
+              "mnozstvo": "0,1 l",
+              "cena": "1,80 €",
+              "podnazov": "",
+              "alergeny": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Chardonnay",
+              "popis": "biele suché",
+              "mnozstvo": "0,1 l",
+              "cena": "1,80 €",
+              "podnazov": "",
+              "alergeny": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Rulandské / Pinot Blanc",
+              "popis": "biele suché",
+              "mnozstvo": "0,1 l",
+              "cena": "1,80 €",
+              "podnazov": "",
+              "alergeny": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Alibernet",
+              "popis": "červené suché",
+              "mnozstvo": "0,1 l",
+              "cena": "1,80 €",
+              "podnazov": "",
+              "alergeny": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Pereg",
+              "popis": "červené sladké",
+              "mnozstvo": "0,1 l",
+              "cena": "2,00 €",
+              "podnazov": "",
+              "alergeny": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Stolové víno",
+              "popis": "polosladké",
+              "mnozstvo": "0,1 l",
+              "cena": "1,40 €",
+              "podnazov": "",
+              "alergeny": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Varené víno",
+              "mnozstvo": "0,1 l",
+              "cena": "2,50 €",
+              "podnazov": "",
+              "popis": "",
+              "alergeny": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Prosecco čapované",
+              "mnozstvo": "0,1 l",
+              "cena": "2,10 €",
+              "podnazov": "",
+              "popis": "",
+              "alergeny": "",
+              "skupina": ""
+            }
+          ],
+          "poznamka": "",
+          "stitky": []
+        },
+        {
+          "nazov": "Destiláty",
+          "poznamka": "0,04 l",
+          "polozky": [
+            {
+              "nazov": "Gin Kensington",
+              "mnozstvo": "",
+              "cena": "1,80 €",
+              "skupina": "Gin a vodka",
+              "podnazov": "",
+              "popis": "",
+              "alergeny": ""
+            },
+            {
+              "nazov": "Vodka Nicolaus",
+              "mnozstvo": "",
+              "cena": "1,70 €",
+              "skupina": "Gin a vodka",
+              "podnazov": "",
+              "popis": "",
+              "alergeny": ""
+            },
+            {
+              "nazov": "Vodka Finlandia",
+              "mnozstvo": "",
+              "cena": "2,40 €",
+              "skupina": "Gin a vodka",
+              "podnazov": "",
+              "popis": "",
+              "alergeny": ""
+            },
+            {
+              "nazov": "Vodka Absolut",
+              "mnozstvo": "",
+              "cena": "2,20 €",
+              "skupina": "Gin a vodka",
+              "podnazov": "",
+              "popis": "",
+              "alergeny": ""
+            },
+            {
+              "nazov": "Spišská borovička",
+              "mnozstvo": "",
+              "cena": "1,70 €",
+              "skupina": "Ovocné",
+              "podnazov": "",
+              "popis": "",
+              "alergeny": ""
+            },
+            {
+              "nazov": "Slivka Moravská",
+              "mnozstvo": "",
+              "cena": "1,90 €",
+              "skupina": "Ovocné",
+              "podnazov": "",
+              "popis": "",
+              "alergeny": ""
+            },
+            {
+              "nazov": "Slivovica Budík",
+              "mnozstvo": "",
+              "cena": "2,90 €",
+              "skupina": "Ovocné",
+              "podnazov": "",
+              "popis": "",
+              "alergeny": ""
+            },
+            {
+              "nazov": "Hruška Moravská",
+              "mnozstvo": "",
+              "cena": "1,90 €",
+              "skupina": "Ovocné",
+              "podnazov": "",
+              "popis": "",
+              "alergeny": ""
+            },
+            {
+              "nazov": "Hruškovica Budík",
+              "mnozstvo": "",
+              "cena": "2,90 €",
+              "skupina": "Ovocné",
+              "podnazov": "",
+              "popis": "",
+              "alergeny": ""
+            },
+            {
+              "nazov": "Um tuzemský",
+              "mnozstvo": "",
+              "cena": "1,40 €",
+              "skupina": "Rum",
+              "podnazov": "",
+              "popis": "",
+              "alergeny": ""
+            },
+            {
+              "nazov": "Captain Morgan",
+              "mnozstvo": "",
+              "cena": "2,40 €",
+              "skupina": "Rum",
+              "podnazov": "",
+              "popis": "",
+              "alergeny": ""
+            },
+            {
+              "nazov": "Rum Bumbu",
+              "mnozstvo": "",
+              "cena": "5,10 €",
+              "skupina": "Rum",
+              "podnazov": "",
+              "popis": "",
+              "alergeny": ""
+            },
+            {
+              "nazov": "Fernet",
+              "mnozstvo": "",
+              "cena": "1,80 €",
+              "skupina": "Bylinné",
+              "podnazov": "",
+              "popis": "",
+              "alergeny": ""
+            },
+            {
+              "nazov": "Fernet Citrus",
+              "mnozstvo": "",
+              "cena": "1,80 €",
+              "skupina": "Bylinné",
+              "podnazov": "",
+              "popis": "",
+              "alergeny": ""
+            },
+            {
+              "nazov": "Demänovka",
+              "mnozstvo": "",
+              "cena": "2,00 €",
+              "skupina": "Bylinné",
+              "podnazov": "",
+              "popis": "",
+              "alergeny": ""
+            },
+            {
+              "nazov": "Becherovka",
+              "mnozstvo": "",
+              "cena": "2,10 €",
+              "skupina": "Bylinné",
+              "podnazov": "",
+              "popis": "",
+              "alergeny": ""
+            },
+            {
+              "nazov": "Jägermeister",
+              "mnozstvo": "",
+              "cena": "2,50 €",
+              "skupina": "Bylinné",
+              "podnazov": "",
+              "popis": "",
+              "alergeny": ""
+            },
+            {
+              "nazov": "Tatranský čaj",
+              "mnozstvo": "",
+              "cena": "3,00 €",
+              "skupina": "Bylinné",
+              "podnazov": "",
+              "popis": "",
+              "alergeny": ""
+            },
+            {
+              "nazov": "Vaječný likér",
+              "mnozstvo": "",
+              "cena": "1,20 €",
+              "skupina": "Bylinné",
+              "podnazov": "",
+              "popis": "",
+              "alergeny": ""
+            },
+            {
+              "nazov": "Aperol",
+              "mnozstvo": "",
+              "cena": "2,10 €",
+              "skupina": "Bylinné",
+              "podnazov": "",
+              "popis": "",
+              "alergeny": ""
+            },
+            {
+              "nazov": "Metaxa 5*",
+              "mnozstvo": "",
+              "cena": "2,20 €",
+              "skupina": "Brandy a whisky",
+              "podnazov": "",
+              "popis": "",
+              "alergeny": ""
+            },
+            {
+              "nazov": "Pliska XO",
+              "mnozstvo": "",
+              "cena": "3,60 €",
+              "skupina": "Brandy a whisky",
+              "podnazov": "",
+              "popis": "",
+              "alergeny": ""
+            },
+            {
+              "nazov": "Ballantine's",
+              "mnozstvo": "",
+              "cena": "2,40 €",
+              "skupina": "Brandy a whisky",
+              "podnazov": "",
+              "popis": "",
+              "alergeny": ""
+            },
+            {
+              "nazov": "Jameson",
+              "mnozstvo": "",
+              "cena": "2,90 €",
+              "skupina": "Brandy a whisky",
+              "podnazov": "",
+              "popis": "",
+              "alergeny": ""
+            },
+            {
+              "nazov": "Tullamore Dew",
+              "mnozstvo": "",
+              "cena": "2,70 €",
+              "skupina": "Brandy a whisky",
+              "podnazov": "",
+              "popis": "",
+              "alergeny": ""
+            },
+            {
+              "nazov": "Martini",
+              "mnozstvo": "0,1 l",
+              "cena": "2,90 €",
+              "skupina": "Aperitív a miešané",
+              "podnazov": "",
+              "popis": "",
+              "alergeny": ""
+            },
+            {
+              "nazov": "Aperol Spritz",
+              "mnozstvo": "0,2 l",
+              "cena": "5,50 €",
+              "skupina": "Aperitív a miešané",
+              "podnazov": "",
+              "popis": "",
+              "alergeny": ""
+            }
+          ],
+          "stitky": []
+        },
+        {
+          "nazov": "Cukrovinky",
+          "poznamka": "podľa ponuky",
+          "polozky": [],
+          "stitky": []
+        }
+      ],
+      "uvod": ""
     },
     {
       "id": "akcie",
       "nazov": "Akcie a oslavy",
-      "popis": "Na oslavy, firemné akcie a spoločenské udalosti máme osobitný lístok. Doplníme ho sem, na vyžiadanie vám ho radi pošleme.",
-      "polozky": []
+      "uvod": "Osobitný lístok na oslavy, firemné akcie a spoločenské udalosti. Menu zostavíme spolu s vami – stačí sa vopred dohodnúť.",
+      "sekcie": [
+        {
+          "nazov": "Predjedlo",
+          "polozky": [
+            {
+              "nazov": "Šunková rolka",
+              "popis": "plnená chrenom 3 ks, zeleninová obloha",
+              "cena": "5,50 €",
+              "podnazov": "",
+              "mnozstvo": "",
+              "alergeny": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Muchotrávka",
+              "popis": "vajíčko, paradajka, šunka, syr, zeleninová obloha, parížsky šalát",
+              "cena": "6,50 €",
+              "podnazov": "",
+              "mnozstvo": "",
+              "alergeny": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Myška",
+              "popis": "vajíčko, šunka, syr, zeleninová obloha, vlašský šalát",
+              "cena": "6,50 €",
+              "podnazov": "",
+              "mnozstvo": "",
+              "alergeny": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Tanier prosciutto",
+              "popis": "prosciutto, paradajka, mozzarella, zelený šalát, melón",
+              "cena": "7,90 €",
+              "podnazov": "",
+              "mnozstvo": "",
+              "alergeny": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Plnená paradajka",
+              "popis": "paradajka, bryndzová nátierka, šunka, saláma, syr, zelenina",
+              "cena": "6,90 €",
+              "podnazov": "",
+              "mnozstvo": "",
+              "alergeny": "",
+              "skupina": ""
+            }
+          ],
+          "poznamka": "",
+          "stitky": []
+        },
+        {
+          "nazov": "Polievka",
+          "polozky": [
+            {
+              "nazov": "Kuracia s gágoríkmi",
+              "cena": "3,90 €",
+              "podnazov": "",
+              "popis": "",
+              "mnozstvo": "",
+              "alergeny": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Kuracia s pečeňovými haluškami",
+              "cena": "3,90 €",
+              "podnazov": "",
+              "popis": "",
+              "mnozstvo": "",
+              "alergeny": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Zeleninová s haluškami",
+              "cena": "3,90 €",
+              "podnazov": "",
+              "popis": "",
+              "mnozstvo": "",
+              "alergeny": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Nepálska polievka",
+              "cena": "5,60 €",
+              "podnazov": "",
+              "popis": "",
+              "mnozstvo": "",
+              "alergeny": "",
+              "skupina": ""
+            }
+          ],
+          "poznamka": "",
+          "stitky": []
+        },
+        {
+          "nazov": "Hlavné jedlo",
+          "poznamka": "s prílohou, omáčkou a zeleninovým šalátom – prílohu si vyberiete podľa chuti",
+          "polozky": [
+            {
+              "nazov": "Kurací plnený závitok",
+              "popis": "obalený v prosciutte, omáčka, opekané zemiaky, ryža, zeleninový šalát",
+              "cena": "13,90 €",
+              "podnazov": "",
+              "mnozstvo": "",
+              "alergeny": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Puk",
+              "popis": "bravčové mäso, plnka, tatárska omáčka, brusnice, omáčka, zemiaková kaša alebo opekané zemiaky, ryža, zeleninový šalát",
+              "cena": "13,90 €",
+              "podnazov": "",
+              "mnozstvo": "",
+              "alergeny": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Pečená bravčová krkovička",
+              "popis": "kysnutá knedľa, zemiaková knedľa, červená kapusta",
+              "cena": "13,90 €",
+              "podnazov": "",
+              "mnozstvo": "",
+              "alergeny": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Zapekané kuracie prsia",
+              "popis": "syr, šunka, brokolica, opekané zemiaky, ryža, omáčka, zeleninový šalát",
+              "cena": "13,40 €",
+              "podnazov": "",
+              "mnozstvo": "",
+              "alergeny": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Tehlička",
+              "popis": "bravčové a kuracie mäso obalené v oravskej slanine, omáčka, americké zemiaky, ryža, zeleninový šalát",
+              "cena": "13,90 €",
+              "podnazov": "",
+              "mnozstvo": "",
+              "alergeny": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Losos",
+              "popis": "anglická zelenina, pizza guličky, kôprová omáčka",
+              "cena": "16,90 €",
+              "podnazov": "",
+              "mnozstvo": "",
+              "alergeny": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Kuracie na prírodno a karé gulička",
+              "popis": "syrová omáčka, karé gulička plnená sušenou slivkou obalená v prosciutte, brusnicová omáčka, americké zemiaky, ryža, zeleninový šalát",
+              "cena": "13,90 €",
+              "podnazov": "",
+              "mnozstvo": "",
+              "alergeny": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Ruža bravčová",
+              "popis": "plnená vareným vajíčkom, poliata tatárskou omáčkou, omáčka, opekané zemiaky, ryža, zeleninový šalát",
+              "cena": "13,90 €",
+              "podnazov": "",
+              "mnozstvo": "",
+              "alergeny": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Kuracie soté",
+              "popis": "na smotane a horčici (kápia, šampiňóny, kukurica, cibuľa, cesnak), ryža, americké zemiaky, zeleninový šalát",
+              "cena": "13,40 €",
+              "podnazov": "",
+              "mnozstvo": "",
+              "alergeny": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Kuracie prsia",
+              "popis": "vo vajíčkovo-strúhankovom obale, zemiaková kaša, kyslá uhorka",
+              "cena": "13,90 €",
+              "podnazov": "",
+              "mnozstvo": "",
+              "alergeny": "",
+              "skupina": ""
+            }
+          ],
+          "stitky": []
+        },
+        {
+          "nazov": "Omáčka v cene hlavného jedla",
+          "stitky": [
+            "hubová dubáková (mixovaná)",
+            "hubová šampiňónová (nemixovaná)",
+            "výpek",
+            "syrová",
+            "kôprová",
+            "zeleninová"
+          ],
+          "polozky": [],
+          "poznamka": ""
+        },
+        {
+          "nazov": "Zeleninový šalát v cene hlavného jedla",
+          "polozky": [
+            {
+              "nazov": "Na rezančeky",
+              "popis": "mrkva s ananásom, červená kapusta, uhorka (kukurica, červená cibuľa, paprika, paradajka)",
+              "podnazov": "",
+              "mnozstvo": "",
+              "cena": "",
+              "alergeny": "",
+              "skupina": ""
+            },
+            {
+              "nazov": "Na kocky",
+              "popis": "uhorka, paprika, paradajka, červená cibuľa, kukurica, zelený šalát, posypané balkánskym syrom",
+              "podnazov": "",
+              "mnozstvo": "",
+              "cena": "",
+              "alergeny": "",
+              "skupina": ""
+            }
+          ],
+          "poznamka": "",
+          "stitky": []
+        }
+      ]
     }
-  ]
+  ],
+  "poznamky": [
+    "Váha jedál je uvedená v surovom stave.",
+    "Polovičné a detské porcie účtujeme v sume 70 % z ceny."
+  ],
+  "alergeny": [
+    "obilniny obsahujúce lepok (pšenica, raž, jačmeň, ovos, špalda, kamut alebo ich hybridné odrody) a výrobky z nich",
+    "kôrovce a výrobky z nich",
+    "vajcia a výrobky z nich",
+    "ryby a výrobky z nich",
+    "arašidy a výrobky z nich",
+    "sójové zrná a výrobky z nich",
+    "mlieko a výrobky z neho vrátane laktózy",
+    "orechy – mandle, lieskové, vlašské, kešu, pekanové, para orechy, pistácie, makadamové a queenslandské orechy a výrobky z nich",
+    "zeler a výrobky z neho",
+    "horčica a výrobky z nej",
+    "sezamové semená a výrobky z nich",
+    "oxid siričitý a siričitany v koncentráciách vyšších ako 10 mg/kg alebo 10 mg/l",
+    "vlčí bôb a výrobky z neho",
+    "mäkkýše a výrobky z nich"
+  ],
+  "zaver": "Prajeme vám dobrú chuť!",
+  "zdroj": "fotky lístka od Rudyho cez WhatsApp 10. 11. 2026 (_research/listok-2026-11-10)"
 }

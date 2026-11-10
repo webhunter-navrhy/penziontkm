@@ -240,7 +240,7 @@
         <h2>Reštaurácia, pizzeria a&nbsp;bar</h2>
         <p>Pre hostí varíme podľa jedálneho lístka aj na želanie. Pripravíme pohostenie na firemné akcie, rodinné oslavy a&nbsp;spoločenské udalosti – treba sa len vopred dohodnúť.</p>
         <p>V&nbsp;bare na prízemí beží na širokouhlom televízore živý prenos z&nbsp;tenisovej haly.</p>
-        <a class="odkaz odkaz-svetly" href="https://www.instagram.com/penzion_tkm/" rel="noopener">Novinky z&nbsp;kuchyne na Instagrame</a>
+        <p class="rest-odkazy"><a class="odkaz odkaz-svetly" href="#listok">Jedálny lístok</a><a class="odkaz odkaz-svetly" href="https://www.instagram.com/penzion_tkm/" rel="noopener">Novinky z&nbsp;kuchyne na Instagrame</a></p>
       </header>
       <figure class="rest-a">{{ img('2026-restauracia-den.jpg', 'Reštaurácia s drevenými lavicami, kockovanými obrusmi a barom v pozadí', sizes='(min-width: 64rem) 32rem, 92vw') }}</figure>
       <figure class="rest-b">{{ img('2026-jedlo.jpg', 'Bravčové s knedľou a červenou kapustou', sizes='(min-width: 64rem) 24rem, 92vw') }}</figure>
@@ -250,7 +250,7 @@
     <div class="oslavy">
       <div class="oslavy-text">
         <h3>Oslavy a&nbsp;akcie</h3>
-        <p>Narodeniny, okrúhle jubileá aj firemné výročia. Stoly prestrieme v&nbsp;reštaurácii alebo v&nbsp;drevenom salóniku a&nbsp;varíme podľa osobitného lístka na akcie.</p>
+        <p>Narodeniny, okrúhle jubileá aj firemné výročia. Stoly prestrieme v&nbsp;reštaurácii alebo v&nbsp;drevenom salóniku a&nbsp;varíme podľa <a class="odkaz-text" href="#listok-akcie">osobitného lístka na akcie</a>.</p>
       </div>
       <div class="turnaje-pas oslavy-pas">
         <figure class="na-sirku">{{ img('2026-oslava-sala.jpg', 'Slávnostne prestretá sála s kvetinovou výzdobou', sizes='(min-width: 64rem) 28rem, 80vw') }}</figure>
@@ -261,12 +261,37 @@
         <figure class="na-sirku">{{ img('2026-hostina.jpg', 'Dlhá slávnostná tabuľa v salóniku so svetelnou výzdobou', sizes='(min-width: 64rem) 28rem, 80vw') }}</figure>
       </div>
     </div>
-    <div class="listky" id="listok">
-      {% for l in data.listky.listky %}<article class="listok" id="listok-{{ l.id }}">
-        <h3>{{ l.nazov }}</h3>
-        {% if l.polozky %}<ul class="listok-polozky" role="list">{% for p in l.polozky %}<li><span>{{ p.nazov }}{% if p.popis %}<small>{{ p.popis }}</small>{% endif %}</span><strong>{{ p.cena }}</strong></li>{% endfor %}</ul>
-        {% else %}<p>{{ l.popis }}</p>{% endif %}
-      </article>{% endfor %}
+    <div class="lk" id="listok">
+      <div class="lk-hlava">
+        <h3>{{ data.listky.nadpis }}</h3>
+        <p>{{ data.listky.uvod }}</p>
+      </div>
+      <div class="lk-zalozky" role="tablist" aria-label="Časti lístka" hidden>
+        {% for l in data.listky.listky %}<button type="button" role="tab" id="lk-tab-{{ l.id }}" aria-controls="listok-{{ l.id }}" aria-selected="{{ 'true' if loop.first else 'false' }}"{% if not loop.first %} tabindex="-1"{% endif %}>{{ l.nazov }}</button>{% endfor %}
+      </div>
+      <div class="lk-papier">
+        {% for l in data.listky.listky %}<section class="lk-panel" id="listok-{{ l.id }}" role="tabpanel" aria-labelledby="lk-tab-{{ l.id }}">
+          <h4 class="lk-panel-nazov">{{ l.nazov }}</h4>
+          {% if l.uvod %}<p class="lk-panel-uvod">{{ l.uvod }}</p>{% endif %}
+          <div class="lk-stlpce">
+            {% for s in l.sekcie %}<div class="lk-sekcia">
+              <h5>{{ s.nazov }}{% if s.poznamka %} <span>{{ s.poznamka }}</span>{% endif %}</h5>
+              {% if s.stitky %}<ul class="lk-stitky" role="list">{% for t in s.stitky %}<li>{{ t }}</li>{% endfor %}</ul>{% endif %}
+              {% if s.polozky %}{% set ns = namespace(sk='') %}<ul class="lk-polozky" role="list">
+                {% for p in s.polozky %}{% if p.skupina and p.skupina != ns.sk %}{% set ns.sk = p.skupina %}<li class="lk-skupina">{{ p.skupina }}</li>{% endif %}<li class="lk-polozka">
+                  <div class="lk-riadok"><span class="lk-nazov">{{ p.nazov }}{% if p.podnazov %} <em>{{ p.podnazov }}</em>{% endif %}</span>{% if p.cena %}<span class="lk-bodky" aria-hidden="true"></span><span class="lk-cena">{{ p.cena }}</span>{% endif %}</div>
+                  {% if p.popis or p.mnozstvo or p.alergeny %}<p class="lk-popis">{{ p.popis }}{% if p.mnozstvo or p.alergeny %} <span class="lk-meta">{% if p.mnozstvo %}<span>{{ p.mnozstvo }}</span>{% endif %}{% if p.alergeny %}<abbr title="alergény {{ p.alergeny }}">A&nbsp;{{ p.alergeny }}</abbr>{% endif %}</span>{% endif %}</p>{% endif %}
+                </li>{% endfor %}
+              </ul>{% endif %}
+            </div>{% endfor %}
+          </div>
+        </section>{% endfor %}
+        <footer class="lk-pata">
+          <ul role="list">{% for n in data.listky.poznamky %}<li>{{ n }}</li>{% endfor %}</ul>
+          <details class="lk-alergeny"><summary>Zoznam alergénov (A&nbsp;1 – 14)</summary><ol>{% for a in data.listky.alergeny %}<li>{{ a }}</li>{% endfor %}</ol></details>
+          <p class="lk-zaver">{{ data.listky.zaver }}</p>
+        </footer>
+      </div>
     </div>
   </div>
 </section>

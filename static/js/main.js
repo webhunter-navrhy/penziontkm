@@ -48,7 +48,7 @@ document.documentElement.classList.add('js');
 
   // jemné odhalenie pri scrolle
   if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    var ciele = document.querySelectorAll('.sekcia-hlava, .ubyt-mriezka figure, .cennik, .tenis, .hala, .dvojica article, .turnaje figure, .rest-mriezka figure, .trasa li, .pamiatky-zoznam article, .apartman-pas, .druzstva, .treningy, .oslavy-text, .listok, .wellness-fotky figure');
+    var ciele = document.querySelectorAll('.sekcia-hlava, .ubyt-mriezka figure, .cennik, .tenis, .hala, .dvojica article, .turnaje figure, .rest-mriezka figure, .trasa li, .pamiatky-zoznam article, .apartman-pas, .druzstva, .treningy, .oslavy-text, .lk, .wellness-fotky figure');
     var io = new IntersectionObserver(function (zaznamy) {
       zaznamy.forEach(function (z) { if (z.isIntersecting) { z.target.classList.add('je-videt'); io.unobserve(z.target); } });
     }, { rootMargin: '0px 0px -8% 0px' });
@@ -154,6 +154,45 @@ document.documentElement.classList.add('js');
       var dx = e.changedTouches[0].clientX - tx; tx = null;
       if (Math.abs(dx) > 50 && aktualne.length > 1) zobraz(idx + (dx < 0 ? 1 : -1));
     }, { passive: true });
+  }
+
+  // jedálny lístok: záložky
+  var lk = document.getElementById('listok');
+  if (lk && lk.querySelector('[role="tab"]')) {
+    var taby = Array.prototype.slice.call(lk.querySelectorAll('[role="tab"]'));
+    var panely = lk.querySelectorAll('.lk-panel');
+    lk.querySelector('.lk-zalozky').hidden = false;
+    lk.classList.add('lk-taby');
+    var vyberTab = function (id, fokus) {
+      taby.forEach(function (t) {
+        var ano = t.getAttribute('aria-controls') === id;
+        t.setAttribute('aria-selected', ano);
+        t.tabIndex = ano ? 0 : -1;
+        if (ano && fokus) { t.focus(); t.scrollIntoView({ block: 'nearest', inline: 'nearest' }); }
+      });
+      panely.forEach(function (p) { p.hidden = p.id !== id; });
+    };
+    taby.forEach(function (t, i) {
+      t.addEventListener('click', function () { vyberTab(t.getAttribute('aria-controls')); });
+      t.addEventListener('keydown', function (e) {
+        var n = e.key === 'ArrowRight' ? i + 1 : e.key === 'ArrowLeft' ? i - 1 : e.key === 'Home' ? 0 : e.key === 'End' ? taby.length - 1 : null;
+        if (n === null) return;
+        e.preventDefault();
+        vyberTab(taby[(n + taby.length) % taby.length].getAttribute('aria-controls'), true);
+      });
+    });
+    vyberTab(taby[0].getAttribute('aria-controls'));
+    var naPanel = function (id) {
+      if (!document.getElementById(id) || id.indexOf('listok-') !== 0) return false;
+      vyberTab(id);
+      lk.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+      return true;
+    };
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest('a[href^="#listok-"]');
+      if (a && naPanel(a.getAttribute('href').slice(1))) { e.preventDefault(); history.replaceState(null, '', a.getAttribute('href')); }
+    });
+    if (location.hash.indexOf('#listok-') === 0) naPanel(location.hash.slice(1));
   }
 
   // formulár: v návrhu ukážkový režim
