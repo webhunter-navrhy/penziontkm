@@ -196,8 +196,8 @@
     <div class="hala" id="hala" data-pasma='{{ data.hala.pasma|tojson }}' data-od="{{ data.hala.od }}" data-do="{{ data.hala.do }}">
       <div class="hala-text">
         <h3>Krytá hala</h3>
-        <p>Zimná sezóna trvá od 15. októbra do 15. apríla. Cena za hodinu podľa dňa a&nbsp;času:</p>
-        <ul class="hala-legenda" role="list">{% for p in data.hala.pasma %}<li class="{{ p.trieda }}" data-pasmo="{{ loop.index0 }}"><span>{{ p.popis }}</span><strong>{{ p.cena }} €</strong></li>{% endfor %}</ul>
+        <p>Zimná sezóna trvá od 15. októbra do 15. apríla. Hala je otvorená denne 7:00 – 22:00, cena za hodinu:</p>
+        <ul class="hala-legenda" role="list">{% for p in data.hala.ceny %}<li class="{{ p.trieda }}"><span>{{ p.popis }}</span><strong>{{ p.cena }} €</strong></li>{% endfor %}</ul>
         <ul class="hala-doplnky" role="list">{% for d in data.hala.doplnky %}<li>{{ d }}</li>{% endfor %}</ul>
       </div>
       <div class="rozpis" aria-hidden="true">

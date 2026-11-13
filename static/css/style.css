@@ -240,6 +240,7 @@ p { margin: 0 0 1em; }
 .hala-legenda { list-style: none; padding: 0; margin: 1.2rem 0; }
 .hala-legenda li { display: flex; align-items: center; gap: .75rem; padding: .55rem 0; border-bottom: 1px solid var(--ciara); }
 .hala-legenda li::before { content: ""; width: 18px; height: 18px; border-radius: 3px; flex: none; }
+.hala-legenda li.cena::before { display: none; }
 .hala-legenda li span { flex: 1; }
 .hala-legenda strong { font: 600 1.1rem var(--font-nadpis); }
 .rano::before, .rozpis-slot.rano { background: var(--zlta-2); }
